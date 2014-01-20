@@ -384,8 +384,6 @@ class Twitter:
 
         random = random.randrange(1,999)
 
-        
-
         twitter_ini = configparser.ConfigParser()
         twitter_ini.read('site_cheker.cfg')
 
@@ -394,7 +392,7 @@ class Twitter:
         APP_KEY = twitter_ini['twitter']['CONSUMER_KEY']
         APP_SECRET = twitter_ini['twitter']['CONSUMER_SECRET']
         acc_to_push = twitter_ini['twitter']['acc_to_push']
-        
+
         twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
         msg ='{0} {1} {2}'.format(random, acc_to_push, msg)
