@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-#!/usr/bin/env python3
+#!/usr/local/python python3.3
 # -*- coding: utf-8 -*-
-=======
-#!/usr/local/python python3.3 
-# -*- coding: utf-8 -*- 
->>>>>>> 41c1b9ca0c5e8288313d3a04e81808366bee7cda
 
 import collections
 import time
