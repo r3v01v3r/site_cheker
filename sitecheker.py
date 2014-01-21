@@ -1,5 +1,5 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import collections
 import time
@@ -25,8 +25,8 @@ for project_name in all_project_names:
         cache.make_site_cache(project_name)
     else:
         continue
-    
-   
+
+
 for project_name in all_project_names:
     if site.get_status_code_of_site(project_name) == 200:
         if status_ini.is_algoritm_status_ON(project_name, 'different rows') == True:
@@ -40,7 +40,7 @@ for project_name in all_project_names:
             if len(row_difference) > 10:
                 msg = '{0} Изменилось более 10 строк'.format(project_name)
                 twitter.make_post_to_twitter_from_str(msg)
-        
+
         if status_ini.is_algoritm_status_ON(project_name, 'href status') == True:
             href_status = difference.chek_for_href_count_change(project_name)
             status_ini.write_href_status_to_ini(project_name, href_status)
@@ -50,19 +50,19 @@ for project_name in all_project_names:
                 twitter.make_post_to_twitter_from_str(msg)
     else:
         status_ini.get_and_write_site_status(project_name)
-    
+
 for project_name in all_project_names:
     if site.get_status_code_of_site(project_name) == 200:
         cache.get_site_cache(project_name)
     else:
         status_ini.get_and_write_site_status(project_name)
-            
+
 report += 1
-    
+
 if report%10 == 1:
     msg = site.get_status_in_str_off_all_projects()
     twitter.make_post_to_twitter_from_str(msg)
 
 for project_name in all_project_names:
     cache.make_site_cache(project_name)
-    
+

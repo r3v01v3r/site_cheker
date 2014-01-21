@@ -1,5 +1,5 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
+#!/usr/bin/env python3.3
+# -*- coding: utf-8 -*-
 
 class Site:
 
@@ -40,7 +40,7 @@ class Site:
 
 
     def get_number_of_max_rows(self, project_name, site_content):
-        cache = Cache()        
+        cache = Cache()
         cache_text = cache.get_site_cache(project_name)
         if len(site_content) > len(cache_text):
             number_of_max_row = len(cache_text)
@@ -82,11 +82,11 @@ class Site:
 
     def make_default_status_ini_for_sites(self, all_project_names):
         import configparser
-        status_ini = configparser.ConfigParser()        
-        
+        status_ini = configparser.ConfigParser()
+
         for project_name in all_project_names:
-            status_ini.add_section(project_name)        
-        
+            status_ini.add_section(project_name)
+
         with open('status.ini', 'w') as file:
             status_ini.write(file)
 
@@ -116,7 +116,7 @@ class Site:
         for line in site_content:
             href_count += len(find_href.findall(line))
         return href_count
-    
+
     def find_all_hrefs_on_site(self, project_name):
         import re
         find_href = re.compile('href=\S*')
@@ -129,8 +129,8 @@ class Site:
                 for href in hrefs_in_line:
                     list_of_hrefs_on_site.append(href)
         return list_of_hrefs_on_site
-    
-    
+
+
     def get_status_in_str_off_all_projects(self):
         site = Site()
         all_project_names = site.get_all_project_names()
@@ -139,12 +139,12 @@ class Site:
             site_status_code = site.get_status_code_of_site(project_name)
             msg = ('{0}{1} status: {2}\n'
                    .format(msg, project_name, site_status_code))
-        
+
         return msg
-    
+
 
 class Cache:
-    
+
     def make_site_cache(self, project_name):
         import datetime
         import configparser
@@ -159,12 +159,12 @@ class Cache:
             file.write('{0}\n'.format(str(site_content[line])))
         file.close
         time_of_cache = datetime.datetime.now()
-        
+
         find_href = re.compile('href=\S*')
         count_href_in_cache = 0
         for line in site_content:
             count_href_in_cache += len(find_href.findall(line))
-        
+
         status_ini = configparser.ConfigParser()
         status_ini.read('status.ini')
         status_ini.set(project_name, 'cache time', str(time_of_cache))
@@ -188,7 +188,7 @@ class Cache:
         cache_text = []
 
         for line in file:
-            cache_text.append(line.strip('\n'))         
+            cache_text.append(line.strip('\n'))
         file.close
         return list(cache_text)
 
@@ -237,8 +237,8 @@ class Difference:
         site_content = site.get_site_content(project_name)
         site_cache = cache.get_site_cache(project_name)
         max_rows = site.get_number_of_max_rows(project_name, site_content)
-        for row in range(0, max_rows): 
-            if site_content[row] != site_cache[row]:  
+        for row in range(0, max_rows):
+            if site_content[row] != site_cache[row]:
                 difference_row.append((row+1))
                 difference_count = True
             elif site_content[row] == site_cache[row] and difference_count == True:
@@ -268,7 +268,7 @@ class Difference:
         difference = Difference()
 
         difference_row_list = difference.row_difference_to_list(project_name)
-        
+
         status_ini.write_difference_rows_to_status_ini(project_name, difference_row_list)
 
 
@@ -284,12 +284,12 @@ class Difference:
                 continue
             else:
                 new_hrefs.append(href)
-        
+
         if len(new_hrefs) == 0:
             return 'OK'
         else:
             return 'Something wrong'
-        
+
     def find_new_hrefs_on_site(self, project_name):
         site = Site()
         cache = Cache()
@@ -302,15 +302,15 @@ class Difference:
                 continue
             else:
                 new_hrefs.append(href)
-            
+
         return(new_hrefs)
 
 
 class StatusINI:
-    
+
     def get_and_write_sites_status(self):
         import configparser
-        
+
         site = Site()
         all_projects_name = site.get_all_project_names()
         status_ini = configparser.ConfigParser()
@@ -319,7 +319,7 @@ class StatusINI:
         for project_name in all_projects_name:
             site_status = site.get_status_code_of_site(project_name)
             status_ini.set(project_name, 'site status', str(site_status))
-        
+
         with open('status.ini', 'w') as configfile:
             status_ini.write(configfile)
 
@@ -349,9 +349,9 @@ class StatusINI:
                 row_list = []
             elif len(rows) == 1:
                 list_of_differet_rows = '{0}, {1}'.format(list_of_differet_rows, rows)
-            
-            
-       
+
+
+
         status_ini.set(project_name, 'different rows',
                        str(list_of_differet_rows[3:]))
 
@@ -374,7 +374,7 @@ class StatusINI:
         status_ini.read('all_projects.cfg')
         algoritm_status = status_ini[project_name][algoritm_name]
         return bool(algoritm_status)
-    
+
 
 
 
@@ -400,10 +400,10 @@ class Twitter:
 
         msg ='{0} {1} {2}'.format(random, acc_to_push, msg)
         twitter.update_status(status=msg)
-        
+
 
 class SiteChekerCFG:
-    
+
     def get_setting_of_sitecheker(self, setting):
         import configparser
         sitecheker_cfg = configparser.ConfigParser()
@@ -413,7 +413,7 @@ class SiteChekerCFG:
         return setting
 
 class SMS:
-    
+
     def send_sms(self, msg):
         pass
 

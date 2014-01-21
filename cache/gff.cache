@@ -1,0 +1,559 @@
+				<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Государственный фонд кинофильмов Российской Федерации</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="" />
+	<meta name="KeyWords" content="" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="robots" content="INDEX,FOLLOW" />
+	<link rel="shortcut icon" href="#" />
+	<link href="/css/style_main.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
+        <style></style>
+	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<script type="text/javascript" src="/js/jquery.jcarousellite.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.lightbox-0.5.js"></script>
+
+            <script type="text/javascript">
+            $(function() {
+
+           $('#gallery a').lightBox();
+            $('#gallery2 a').lightBox();
+             });
+			 
+			$(document).ready(function() {
+				var offset_menu = $('.nav-top-line').offset();
+				$('.mtop').hover(function(){
+					var offset_item = $(this).offset();
+					var padding = (offset_menu.left-offset_item.left)%10;
+					$(this).css('background-position', padding+'px top,'+padding+'px bottom');
+				});
+			}); 	<!--[if IE]><link rel="stylesheet" href="./css/forie.css" /><![endif]-->
+
+            </script>
+
+	<!--[if IE]><link rel="stylesheet" href="./css/forie.css" /><![endif]-->
+
+
+	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="/jw_player/jwplayer.js"></script>
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$("a.foto").fancybox(
+			{						
+			 "imageScale" : false, 
+			"zoomOpacity" : false,
+			"zoomSpeedIn" : 1000,	
+			"zoomSpeedOut" : 1000,	
+			"zoomSpeedChange" : 1000, 
+			"frameWidth" : 700,	 
+			"frameHeight" : 600, 
+			"overlayShow" : true, 
+			"overlayOpacity" : 0.8,	
+			"hideOnContentClick" :false,
+			"centerOnScroll" : false,
+			"titlePosition"     : 'over', 
+            "titleFormat"      : function(title, currentArray, currentIndex, currentOpts) { return '<span id="fancybox-title-over">Фото ' + (currentIndex + 1) + ' из ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+                    }
+			});
+         $("a.foto2").fancybox(
+			{						
+			
+             "autoScale" : false
+             
+                    });
+		
+	});
+	</script>
+
+</head>
+<!-- page.tpl -->
+<body>
+	<div class="wrapper">
+		<div class="head">
+			<ul class="lang">
+				<li class="activ"><a href="/" title=""><img src="/images/ru.gif"  alt="Русская версия" /></a></li>
+				<li><a href="/en" title=""><img src="/images/en.gif"  alt="English version" /></a></li>
+				<li><a href="/fr" title=""><img src="/images/fr.gif"  alt="Français version" /></a><!--<span>|</span></li>
+				<li><a href="#" title="">DE</a></li> -->
+			</ul>
+                        <ul class="size_text">
+				<li><a href="/?size=small" title="">АБ</a><span>/</span></li>
+				<li><a href="/?size=big" title=""><font size = "4">АБ</font></a>
+			</ul>
+                   <div class="title">Федеральное Государственное Бюджетное Учреждение Культуры<br> <small>Учредителем и собственником имущества Госфильмофонда является Российская Федерация<br>Особо ценный объект культурного наследия народов Российской Федерации</small></div>
+			<ul class="icons">
+				 <li class="hom"><a href="/" title="На Главную"><img src="/images/hom.gif" width="11" height="10" alt="" title="" /></a><span>|</span></li>
+				 <li class="map"><a href="mailto:gff@gff-rf.ru" title="Е-mail"><img src="/images/letter.gif" width="12" height="8" alt="" title="" /></a><span>|</span></li>
+				 <li><a href="#" title=""><img src="/images/map.gif" width="11" height="9" alt="" title="" /></a></li>
+			</ul>
+                    
+			<a class="logo" href="/" title="Государственный фонд кинофильмов Российской Федерации">&nbsp;</a>
+			<div class="header-inner">
+			
+				<div class="search">
+					<form method="get" action="/">
+						<div class="clearfix">
+							<input name="txt" class="tx" type="text" value="введите слово для поиска" onfocus="if(this.value=='введите слово для поиска') {this.value='';}" onblur="javascript:if(this.value==''){this.value='введите слово для поиска'};"  />
+                                                        <input name=type type="hidden" value= 'doc_by_txt'/>
+                                                        <input name=action type="hidden" value= 'search'/>
+							<input class="submit" type="submit" value="поиск" />
+						</div>
+					</form>
+				</div>
+                                <div class="social">
+                                        <a href="https://www.facebook.com/GosfilmofondRossii" title=""><img src="/images/facebook.png" width="18" height="18" alt="" title="" /></a>
+                                        <a href="https://twitter.com/Gosfilmofond" title=""><img src="/images/twitter.png" width="18" height="18" alt="" title="" /></a>
+                                        <a href="http://vk.com/public49427246" title=""><img src="/images/vkontakte.png" width="18" height="18" alt="" title="" /></a>
+                                        
+				</div>
+			</div>
+		</div>
+				<div class="nav">
+			<ul class="nav-top-line">
+                                        <li><a href='/'  class='mtop'><span>Главная</span></a></li><li><a href='/about'  class='mtop'><span>О фонде</span></a></li><li><a href='/belyye_stolby_fest'  class='mtop'><span>Кинофестиваль</span></a></li><li><a href='/about/representation'  class='mtop'><span>Представительства<br>в РФ и за рубежом</span></a></li><li><a href='/videoportal'  class='mtop'><span>ТВ</span></a></li><li><a href='/about/illuzion'  class='mtop'><span>Кинотеатр<br> "Иллюзион"</span></a></li><li><a href='/about/festival_center'  class='mtop'><span>Фестивальный<br> Киноцентр</span></a></li><li><a href='/catalogues_and_archives'  class='mtop'><span>Каталоги<br> и архив</span></a></li><li><a href='/news'  class='mtop'><span>Новости</span></a></li><li><a href='/service'  class='mtop'><span>Услуги</span></a></li><li><a href='/about/vacancy'  class='mtop'><span>Вакансии</span></a></li><li><a href='/about/contact'  class='mtop'><span>Контакты</span></a></li>
+				
+				
+	</ul>
+		</div>
+
+		<div class="content">
+			<div class="preambule">
+                                
+	
+				<div class="clear"></div>
+			</div>
+			<div class="container">
+				<div class="left-col">
+                                        <div class="banner">
+						<img src="/images/gff_predlagaet.jpg" width="641" height="148" alt="" title="" />
+					</div>
+					<div class="banner">
+						<!--<a href="/belyye_stolby_fest" title=""><img src="/images/banner.jpg" width="641" height="148" alt="" title="" /></a>-->
+					</div>
+                                        <div class="inner">
+						<ul class="patway clearfix">
+                                                
+						</ul>
+                                                    <div class="main_content">
+                                                    <h1><strong>ФГБУК "Государственный фонд кинофильмов Российской Федерации"</strong></h1>
+<p><strong></strong>(<strong>Госфильмофонд России</strong>)&nbsp;</p>
+<p class="p1" style="text-align: justify;">Госфильмофонд России является федеральным государственным бюджетным учреждением культуры (ФГБУК). Он представляет собой Государственный фонд кинофильмов РФ, который обеспечивает хранение коллекции фильмов и других киноматериалов. Его службы осуществляют собирательскую, творческо-производственную, культурно-просветительскую, искусствоведческую, фильмографическую, методическую и информационную деятельность.</p>
+<p class="p1" style="text-align: justify;">Территориально учреждение расположено в г. Домодедово Московской области по адресу: микрорайон Белые Столбы, проспект Госфильмофонда.</p>
+<p class="p1" style="text-align: justify;">Госфильмофонд владеет крупнейшей и одной из лучших кинематографических коллекций в мире. На сегодняшний день она насчитывает более 70 тысяч наименований кинолент, или 967 тысяч роликов фильмового материала &mdash; от немых картин братьев Люмьер, снятых во Франции в 1895 г., до современных российских и зарубежных произведений кинематографа.</p>
+<p class="p1" style="text-align: justify;">Главный принцип хранения материалов состоит в том, что для нас значимы и раритеты конца XIX века, и творения новейшего времени. Они в равной степени являются достоянием визуальной истории человечества.</p>
+<p class="p1" style="text-align: justify;">Помимо кинокартин, в Госфильмофонде России хранится 450 тысяч единиц материала, имеющего отношение к киноискусству (плакаты, фотографии, литературные сценарии и пр.).</p>
+<p class="p1" style="text-align: justify;">Правительство Российской Федерации обеспечивает правовые, финансовые и материально-технические условия, необходимые для сохранности, целостности и неотчуждаемости &nbsp;коллекции фильмов и других киноматериалов, хранящихся в фонде.</p>
+<p class="p1" style="text-align: justify;">Госфильмофонд России обладает исключительным правом использования собственных средств индивидуализации, а также распоряжается принадлежащими ему правами на результаты интеллектуальной деятельности, в том числе возможностью предоставить другому лицу право использования соответствующих результатов на основании лицензионного договора.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>Гимн Госфильмофонда России&nbsp;</strong></p>
+<p><object style="display: block; margin-left: auto; margin-right: auto;" width="400" height="300" data="/video/player/uflvplayer_500x375.swf" type="application/x-shockwave-flash"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="FlashVars" value="way=/video/gimn.flv&amp;swf=/video/player/uflvplayer_500x375.swf&amp;w=500&amp;h=375&amp;pic=/video/zast_gimn.jpg&amp;autoplay=0&amp;tools=1&amp;skin=white&amp;volume=70&amp;q=1&amp;comment=Гимн Госфильмофонда РФ" /><param name="src" value="/video/player/uflvplayer_500x375.swf" /></object></p>
+<p style="text-align: center;"><span style="font-size: small;"><em>Слова: Михаил Шабров<br /></em><em>Музыка: Игорь Кантюков<br /></em><em>Исполняет: Леонид Серебренников</em></span></p>
+<p style="text-align: center;"><strong>Флаг Госфильмофонда России&nbsp;</strong></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/obj_files/9326_5.jpg" alt="" width="400" height="248" /></p>
+<p style="text-align: center;"><em>Флаг Госфильмофонда России состоит из черного, синего, зеленого и красного цветов, которые символизируют переход в кинематографе с черно-белой кинопленки на цветную, чувствительную к синим, зеленым и красным лучам спектра.</em></p>
+<p style="text-align: justify;"><strong>Цели деятельности Госфильмофонда России:</strong></p>
+<p style="text-align: justify;">1) формирование путем пополнения, комплектования, учета, регистрации и хранения коллекции фильмов и других киноматериалов;</p>
+<p style="text-align: justify;">2) осуществление исследовательской и собирательской деятельности, связанной с пополнением коллекции фильмов и других киноматериалов, популяризация коллекции фильмов и других киноматериалов.</p>
+<p style="text-align: justify;"><strong>Предмет деятельности Госфильмофонда России:</strong></p>
+<p style="text-align: justify;">Обеспечение сохранности, пополнение и реставрация подлежащей хранению коллекции фильмов и других киноматериалов, проведение информационных и культурно-просветительских мероприятий в своей сфере деятельности.</p>
+<p style="text-align: justify;">Госфильмофонд России имеет представительство, расположенное в г. Москве, Малый Гнездниковский пер., д. 7/6, а также два филиала: кинотеатр &laquo;Иллюзион&raquo;, расположенный в г. Москве,&nbsp; Котельническая наб., д. 1/15, и зообазу, расположенную во Владимирской области, Петушинский р-н, дер. Леоново.</p>
+<p style="text-align: center;"><strong>Товарный знак Госфильмофонда России&nbsp;</strong></p>
+<table style="margin-left: auto; margin-right: auto;" border="0">
+<tbody>
+<tr>
+<td><img src="/obj_files/9326_6.jpg" alt="" height="200" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;<a class="foto" href="/obj_files/9326_7.jpg"><img src="/obj_files/9326_4.jpg" alt="" width="209" height="200" /></a></td>
+</tr>
+</tbody>
+</table></br><font size = '1' color = '#fff'>Страница сгенерирована за 0.18 секунд !</font>
+                                                    </div>
+					</div>
+					<div class="news-outer">
+						<div class="news-title">	
+							<h2>Новости</h2>
+							<a class="archiv" href="/news" title="">архив новостей</a>
+							<div class="clear"></div>
+							<img class="arr" src="/images/arr.gif" width="13" height="5" alt="" title="" />
+						</div>
+						<div class="news-body">
+                                                <ul><li class='clearfix'><span class='date'><i>16.</i>01.</span><div class='info'><p>
+					Николай Бородачев: «Сейчас Госфильмофонд является самым крупным правообладателем в мире»... <a class='more' href = '/?action=news&idnews=254'>подробнее</a> </p></div></li><li class='clearfix'><span class='date'><i>15.</i>01.</span><div class='info'><p>
+					Поздравления с Новым годом и Рождеством... <a class='more' href = '/?action=news&idnews=253'>подробнее</a> </p></div></li><li class='clearfix'><span class='date'><i>13.</i>01.</span><div class='info'><p>
+					Рождественский праздник для детей в кинотеатре «Иллюзион»... <a class='more' href = '/?action=news&idnews=251'>подробнее</a> </p></div></li><li class='clearfix'><span class='date'><i>09.</i>01.</span><div class='info'><p>
+					В Госфильмофонде России прошла новогодняя елка для детей... <a class='more' href = '/?action=news&idnews=252'>подробнее</a> </p></div></li><li class='clearfix'><span class='date'><i>29.</i>12.</span><div class='info'><p>
+					Поздравление Владимира Путина с Новым годом... <a class='more' href = '/?action=news&idnews=249'>подробнее</a> </p></div></li><li class='clearfix'><span class='date'><i>27.</i>12.</span><div class='info'><p>
+					Николай Бородачев принял участие в IV Пленуме Правления Союза кинематографистов России... <a class='more' href = '/?action=news&idnews=248'>подробнее</a> </p></div></li></ul>
+			
+						</div>
+					</div>
+                                        <div class="banner" align="center" ><br>
+                                                    <h4>Наши партнеры</h4>
+						<a href="http://mkrf.ru/"><img src="/uploads/1376470863.jpg" alt="" height="160" /></a><br>
+                                                <a href="http://www.unikino.ru/"><img src="/uploads/1376470929.gif" alt="" width="150"/></a>
+                                                <a href="http://www.unikino.tv"><img src="/uploads/1379937153.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.moviestart.ru/"><img src="/uploads/1376546814.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.mkvi.info/"><img src="/uploads/1376471390.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.proficinema.ru/about/"><img src="/uploads/1376470926.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.fond-kino.ru/"><img src="/uploads/1376470934.png" alt="" height="60" /></a>
+                                                <a href="http://www.nikfi.ru/"><img src="/uploads/1376470886.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.mosfilm.ru/main.php"><img src="/uploads/1376470858.png" height="60" alt="" /></a>
+                                                <a href="http://www.museikino.ru/"><img src="/uploads/1376470883.gif" alt="" height="30" /></a>
+                                                <a href="http://www.arbat-moskino.ru/"><img src="/uploads/1376470860.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.mos-kino.ru/"><img src="/uploads/1376470855.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.vgik.info/"><img  src="/uploads/1376471423.jpg" alt="" width="150"/></a>
+                                                <a href="http://www.unikino.ru/sk-news.html"><img src="/uploads/1377071374.jpg" alt="" height="60"/></a>
+                                                <a href="http://www.gukit.ru/"><img src="/uploads/1377071377.jpg" alt="" height="60" /></a>
+                                                <a href="http://www.close-up.ru/"><img src="/uploads/1377071371.gif" alt="" height="60" /></a>
+                                                <a href="http://culture.ru/atlas/object/788"><img src="/uploads/1377863723.jpg" alt="" /></a>
+                                                <a href="http://www.mdk-arbat.ru/"><img src="/uploads/tb_1387956913.png" alt="" height="60" /></a>
+                                                
+                                                <br>
+                                                     <br>
+					</div>  
+                                              
+                                                
+					<div class="banner">
+						<a href="/belyye_stolby_fest" title=""><img src="/images/banner.jpg" width="641" height="148" alt="" title="" /></a>
+					</div>
+                                         
+                                                
+                                                
+					<!--<div class="pics">
+						<ul class="clearfix">
+							<li>
+								<a href="#" title=""><img src="/uploads/001.jpg" width="160" height="148" alt="" title="" /></a>
+								<div class="more-info">
+									<a href="#" title="">Кино-каталог</a>
+								</div>
+							</li>
+							<li>
+								<a href="#" title=""><img src="/uploads/002.jpg" width="160" height="148" alt="" title="" /></a>
+								<div class="more-info">
+									<a href="#" title="">Фото-каталог</a>
+								</div>
+							</li>
+							<li>
+								<a href="#" title=""><img src="/uploads/003.jpg" width="160" height="148" alt="" title="" /></a>
+								<div class="more-info">
+									<a href="#" title="">Мастера кино</a>
+								</div>
+							</li>
+							<li>
+								<a href="/hronika" title=""><img src="/uploads/004.jpg" width="161" height="148" alt="" title="" /></a>
+								<div class="more-info">
+									<a href="/hronika" title="">Кинохроника</a>
+								</div>
+							</li>
+						</ul>
+					</div> -->
+					<div class="postambule">
+						<p>В электронном архиве Госфильмофонда РФ собирается уникальная коллекция оцифрованных материалов по фильмам: фотографии, сценарии, газетные статьи, плакаты, афиши. Мы начинаем открывать её для Вас.</p>
+						<img class="postambule-arow" src="/images/postambule-arow.gif" width="13" height="6" alt="" title="" />
+					</div>
+					
+					<div class="gallery">
+						<button class="next">&nbsp;</button>
+						<button class="prew">&nbsp;</button>
+						<div class="foto-slider-inner">
+							<div class="slide">
+								<ul class="clearfix">
+									<li><a href="#" title=""><img src="/uploads/005.jpg" width="89" height="73" alt="" title="" /></a></li>
+									<li><a href="#" title=""><img src="/uploads/006.jpg" width="89" height="73" alt="" title="" /></a></li>
+									<li><a href="#" title=""><img src="/uploads/007.jpg" width="89" height="73" alt="" title="" /></a></li>
+									<li><a href="#" title=""><img src="/uploads/008.jpg" width="89" height="73" alt="" title="" /></a></li>
+									<li><a href="#" title=""><img src="/uploads/009.jpg" width="89" height="73" alt="" title="" /></a></li>
+								</ul>
+							</div>
+						</div>	
+					</div>
+					<div class="line"></div>
+					
+				</div>
+				<div class="right-col">
+					<div class="form">
+						<h3>Вход для клиентов</h3>
+						<form method="post" action="#">
+							<div class="clearfix">
+								<input class="txx" type="text" value="логин" />
+								<input class="txx" type="password" value="РїР°СЂРѕР»СЊ" />
+								<input class="submit-2" type="submit" value="войти" />
+							</div>
+							<div class="clearfix">
+								<a href="#" title="">Регистрация</a>
+								<img src="/images/border.gif" width="1" height="7" alt="" title="" />
+								<a href="#" title="">Забыли пароль?</a>
+							</div>
+						</form>
+					</div>
+					<!--<div class="block">
+						<!-- <h2>Сеансы Кинотеатра «Иллюзион»</h2>  
+                                                <table cellpadding='0' cellspacing='0'></table>
+					</div> 
+                                        <div class="block">
+                                          <a  href="/?action=news&idnews=156" ><img src="/images/boccalino.jpg" alt="Приз boccalino" /></a> 
+                                        </div>-->
+                                        
+                                        <div class="block">
+    <a  href="/videoportal" ><img src="/images/video.jpg" alt="Видеопортал" /></a> 
+<!--<a class="foto2" href="/images/romanovy.jpg" ><img src="/images/romanovy_sm.jpg" alt=""  /></a>-->
+</div>
+									
+<div class="block">
+<a  href="/about/blagovest" ><img src="/images/blagovest.jpg" alt="Фонд Благовест" /></a> 
+</div>
+
+<!--  
+Пример вставки изображения, клик по которому открывает его в pop-up окне.
+<a class="foto" href="/uploads/1387802331_big.jpg" rel="group"><img src="/images/ny2013_big.jpg" alt="С Новым 2014 Годом!" /></a>
+-->
+
+                                              
+                                         
+
+                                        
+<div class='presurvey'>
+	<a href='/online_exhibition/lokarno' title=''><img src='/obj_files/9601_1.jpg' width='316' height='121' alt='' title='' /></a>
+        <span><a href='/online_exhibition/lokarno' title=''>ЛОКАРНО ЗНАКОМИТСЯ С ГОСФИЛЬМОФОНДОМ</a></span>
+</div>
+<div class='about'>
+	<p class='time'>24.09.2013</p>
+	<h2>Новая Интернет-выставка</h2>
+        <p><p style="text-align: justify;">Накануне открытия 66-го Международного кинофестиваля в городе Локарно состоялось открытие выставки &laquo;Знакомьтесь -&nbsp; Госфильмофонд&raquo;.... <a class='more' href = '/online_exhibition/lokarno' title='подробнее'>подробнее</a></p>
+	<!--<p><p style="text-align: justify;">Накануне открытия 66-го Международного кинофестиваля в городе Локарно состоялось открытие выставки &laquo;Знакомьтесь -&nbsp; Госфильмофонд&raquo;. На выставке была представлена деятельность одной из крупнейших синематек мира.</p>
+<p style="text-align: justify;">Посетители выставки с большим интересом ознакомились с высоко значимой деятельностью Госфильмофонда России в области популяризации его киноколлекции и пропаганды российского кино. Знаменателен тот факт, что данное мероприятие проходит в рамках празднования 65-летия Госфильмофонда России.</p>
+<p style="text-align: center;">&nbsp;</p>
+<table border="0" align="center">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110071.jpg" rel="group"><img src="/uploads/tb_1380110071.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110076.jpg" rel="group"><img src="/uploads/tb_1380110076.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110080.jpg" rel="group"><img src="/uploads/tb_1380110080.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110976.jpg" rel="group"><img src="/uploads/tb_1380110976.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110517.jpg" rel="group"><img src="/uploads/tb_1380110517.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110530.jpg" rel="group"><img src="/uploads/tb_1380110530.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110537.jpg" rel="group"><img src="/uploads/tb_1380110537.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110542.jpg" rel="group"><img src="/uploads/tb_1380110542.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110548.jpg" rel="group"><img src="/uploads/tb_1380110548.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110554.jpg" rel="group"><img src="/uploads/tb_1380110554.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110560.jpg" rel="group"><img src="/uploads/tb_1380110560.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110565.jpg" rel="group"><img src="/uploads/tb_1380110565.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110570.jpg" rel="group"><img src="/uploads/tb_1380110570.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110577.jpg" rel="group"><img src="/uploads/tb_1380110577.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110659.jpg" rel="group"><img src="/uploads/tb_1380110659.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110663.jpg" rel="group"><img src="/uploads/tb_1380110663.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110666.jpg" rel="group"><img src="/uploads/tb_1380110666.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110670.jpg" rel="group"><img src="/uploads/tb_1380110670.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110674.jpg" rel="group"><img src="/uploads/tb_1380110674.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110678.jpg" rel="group"><img src="/uploads/tb_1380110678.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110759.jpg" rel="group"><img src="/uploads/tb_1380110759.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110764.jpg" rel="group"><img src="/uploads/tb_1380110764.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110770.jpg" rel="group"><img src="/uploads/tb_1380110770.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110775.jpg" rel="group"><img src="/uploads/tb_1380110775.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110781.jpg" rel="group"><img src="/uploads/tb_1380110781.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110784.jpg" rel="group"><img src="/uploads/tb_1380110784.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110792.jpg" rel="group"><img src="/uploads/tb_1380110792.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110798.jpg" rel="group"><img src="/uploads/tb_1380110798.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110804.jpg" rel="group"><img src="/uploads/tb_1380110804.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110812.jpg" rel="group"><img src="/uploads/tb_1380110812.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110815.jpg" rel="group"><img src="/uploads/tb_1380110815.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110819.jpg" rel="group"><img src="/uploads/tb_1380110819.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110821.jpg" rel="group"><img src="/uploads/tb_1380110821.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110826.jpg" rel="group"><img src="/uploads/tb_1380110826.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110831.jpg" rel="group"><img src="/uploads/tb_1380110831.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110834.jpg" rel="group"><img src="/uploads/tb_1380110834.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110838.jpg" rel="group"><img src="/uploads/tb_1380110838.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110842.jpg" rel="group"><img src="/uploads/tb_1380110842.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110851.jpg" rel="group"><img src="/uploads/tb_1380110851.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110854.jpg" rel="group"><img src="/uploads/tb_1380110854.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110858.jpg" rel="group"><img src="/uploads/tb_1380110858.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110862.jpg" rel="group"><img src="/uploads/tb_1380110862.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110866.jpg" rel="group"><img src="/uploads/tb_1380110866.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110871.jpg" rel="group"><img src="/uploads/tb_1380110871.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110875.jpg" rel="group"><img src="/uploads/tb_1380110875.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110878.jpg" rel="group"><img src="/uploads/tb_1380110878.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110881.jpg" rel="group"><img src="/uploads/tb_1380110881.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110885.jpg" rel="group"><img src="/uploads/tb_1380110885.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>&nbsp;<a class="foto" href="/uploads/1380110889.jpg" rel="group"><img src="/uploads/tb_1380110889.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110893.jpg" rel="group"><img src="/uploads/tb_1380110893.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110897.jpg" rel="group"><img src="/uploads/tb_1380110897.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110900.jpg" rel="group"><img src="/uploads/tb_1380110900.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110904.jpg" rel="group"><img src="/uploads/tb_1380110904.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110908.jpg" rel="group"><img src="/uploads/tb_1380110908.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110911.jpg" rel="group"><img src="/uploads/tb_1380110911.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110915.jpg" rel="group"><img src="/uploads/tb_1380110915.jpg" alt="" /></a></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><a class="foto" href="/uploads/1380110920.jpg" rel="group"><img src="/uploads/tb_1380110920.jpg" alt="" /></a></strong></td>
+<td style="text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Авторы концепции: Мухтор Мансурходжаев, Евгений Барыкин</p>
+<p style="text-align: justify;">Над материалами работали: Святослав Дронов, Роман Банщиков, Наталья Самойлова, Владимир Савчук</p>...<a class='more' href = '/online_exhibition/lokarno' title='подробнее'>подробнее</a></p> -->
+</div>            
+
+
+<div class='presurvey'>
+	<a href='/online_exhibition/vocarenie' title=''><img src='/obj_files/9561_1.jpg' width='316' height='121' alt='' title='' /></a>
+        <span><a href='/online_exhibition/vocarenie' title=''>ВОЦАРЕНИЕ ДОМА РОМАНОВЫХ</a></span>
+</div>
+<div class='about'>
+	<p class='time'>03.06.2013</p>
+	<h2>Новая Интернет-выставка</h2>
+        <p><p>ВОЦАРЕНИЕ ДОМА РОМАНОВЫХ (1613). Историческая картина, 940 м, 35:00,</p>
+<p>Акционерное общество "А.Ханжонков и К", 1913 г. Выход на экран - 16.02.1913... <a class='more' href = '/online_exhibition/vocarenie' title='подробнее'>подробнее</a></p>
+	<!--<p><p>ВОЦАРЕНИЕ ДОМА РОМАНОВЫХ (1613). Историческая картина, 940 м, 35:00,</p>
+<p>Акционерное общество "А.Ханжонков и К", 1913 г. Выход на экран - 16.02.1913 г.</p>
+<p><strong>Сценаристы и режиссеры</strong> - Василий Гончаров, Петр Чардынин; оператор &ndash; Луи Форестье.</p>
+<p><strong>Консультация</strong> - О[бщест]-ва ознакомления с историческими событиями в России.</p>
+<p><strong>В ролях:</strong> Софья Гославская (Михаил Романов), Павел Кнорр (Сусанин - сцены в доме), Василий Степанов (Сусанин - сцены в лесу), Татьяна Шорникова (Антонина), Лидия Триденская (инокиня Марфа /в миру Ксения/, мать Михаила Романова), Н.Семенов (Ваня), Иван Мозжухин (две роли - юродивый и всадник в свите князя Пожарского), Пётр Чардынин и др.</p>
+<p>В массовых сценах артисты Введенского народного дома.</p>
+<p>Юбилейная картина воспроизводит официальную версию избрания на царство Михаила Романова. В фильм вошла значительная часть незаконченной постановки 1912 года "Жизнь за царя".</p>
+<p>Сюжет отражает события Смутного времени, происходящие после падения Лжедмитрия и низвержения с царского престола Василия Шуйского - времени, когда Россия осталась без правителя.</p>
+<p>Исторические эпизоды предваряют пояснительные надписи /частично стилизованные под старинное написание/:</p>
+<ul>
+<li>1610 год. Московские бояре подписывают с гетманом Жолкевским договор об избрании польского королевича Владислава русским царём при условии, что тот обязательно крестится в православную веру.</li>
+<li>Посольство из Москвы во главе с митрополитом Филаретом и князем Василием Голицыным прибывает в стан короля Сигизмунда, который много месяцев осаждает Смоленск. Сигизмунд не желает выполнять главного условия договора: ссылаясь на молодость сына, он сам не прочь занять русский престол.</li>
+<li>Поляки вводят свои войска в Москву.</li>
+<li>Патриарх Гермоген призывает народ к борьбе против польских захватчиков.</li>
+<li>Поляки бесчинствуют в Москве.</li>
+<li>Призывы Гермогена услышаны - организуется первое народное ополчение, но его руководителя Ляпунова убивают по навету захватчиков.</li>
+<li>Поляки заточают в тюрьму Гермогена.</li>
+<li>Вести о бесчинствах шляхтичей в Москве доходят до Нижнего Новгорода. Минин обращается к согражданам собрать средства на новое ополчение.</li>
+<li>1612 год. Осада Китай-города. Оттесненные поляки скрываются в Кремле. Вместе с ними захваченные бояре, в том числе шестнадцатилетний Михаил Федорович Романов со своей матерью - инокиней Марфой.</li>
+<li>Начавшаяся в Кремле бескормица заставляет поляков отпустить бояр, дабы избавиться от лишних ртов. Среди освобождённых - Михаил Федорович. Изнурённые голодом узники встречены Пожарским и другими именитыми людьми.</li>
+<li>Через несколько дней князь Пожарский с народным ополчением занимает Кремль.</li>
+<li>21 февраля 1613 года заседает Собор. Сюда созваны духовные власти, выбранные из дворян, детей боярских, а также люди из черносошных крестьян, торговых, посадских и уездных. Каждый подает письменное мнение. На царство единогласно избирается шестнадцатилетний Михаил Федорович Романов, который в эти дни пребывает в Ипатьевском монастыре Костромы.</li>
+<li>Поляки ищут юного царя, чтобы убить его, но Михаила Романова ценой жизни спасает Иван Сусанин - он заводит супостатов в непроходимый зимний лес. Поляки расправляются с Сусаниным.</li>
+<li>Торжественный въезд нового царя в Москву на белом коне в окружении ликующего народа.</li>
+</ul>
+<p>Съёмки последнего эпизода сделаны зимой, тогда как въезд избранного царя состоялся в мае 1613 года.</p>
+<p>Роль юного Михаила Романова сыграла актриса Софья Гославская (см. её книгу "Записки киноактрисы", М., 1974.).</p>
+<p>Фильм хранится в Госфильмофонде.</p>
+<p>Отклики прессы 1913 года:</p>
+<p>&laquo;Считаем своим долгом указать, что предлагаемая нами юбилейная картина &laquo;Воцарение Дома Романовых&raquo; не представляет из себя отрывочных отдельных эпизодов, а является цельным и связным сюжетом, изображающим точные народные переживания того времени&raquo;</p>
+<p>ВК. 1923. № 2.&nbsp;III</p>
+<p style="text-align: center;"><strong>КАДРЫ ИЗ ФИЛЬМА</strong></p>
+<p style="text-align: center;">&nbsp;<a class="foto" href="/upload/voc/01.jpg" rel="group"><img src="/upload/voc/01_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/02.jpg" rel="group"><img src="/upload/voc/02_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/03.jpg" rel="group"><img src="/upload/voc/03_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/04.jpg" rel="group"><img src="/upload/voc/04_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/05.jpg" rel="group"><img src="/upload/voc/05_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/06.jpg" rel="group"><img src="/upload/voc/06_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/07.jpg" rel="group"><img src="/upload/voc/07_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/08.jpg" rel="group"><img src="/upload/voc/08_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/09.jpg" rel="group"><img src="/upload/voc/09_sm.jpg" alt="" /></a> <a class="foto" href="/upload/voc/10.jpg" rel="group"><img src="/upload/voc/10_sm.jpg" alt="" /></a></p>...<a class='more' href = '/online_exhibition/vocarenie' title='подробнее'>подробнее</a></p> -->
+</div>            
+
+
+                                      
+					<div class="new">
+						<div class="news-title">
+							<h2>Новые поступления</h2>
+							<a class="archiv" href="/new_incom" title="">архив</a>
+							<div class="clear"></div>
+							<img class="arr" src="/images/arr.gif" width="13" height="5" alt="" title="" />
+						</div>
+                                                <ul><li class='clearfix'><small><b>11.12.13</b></small><h3><a href = '/new_incom/9625'>"Мой Пушкинский.  Часть 1" публицистический фильм,  цветной</a></h3></li><li class='clearfix'><small><b>13.11.13</b></small><h3><a href = '/new_incom/9631'>"Владимир Асмолов. "Концерт в Днепропетровске 3 ноября 1989 г. 2013  DVD 2" музыкальная видеопрограмма, фильм  цветной</a></h3></li><li class='clearfix'><small><b>13.11.13</b></small><h3><a href = '/new_incom/9632'>"Всем Россию любящим..." фильм-концерт,  цветной</a></h3></li><li class='clearfix'><small><b>13.11.13</b></small><h3><a href = '/new_incom/9629'>Новиков Александр  "Девочка из лета" (Концерт в "Крокус Сити Холл" фильм-концерт,  цветной</a></h3></li><li class='clearfix'><small><b>13.11.13</b></small><h3><a href = '/new_incom/9628'>Философско-поэтические киноэскизы Ларисы Дмитриевой к картинам Николая Рериха и Святослава Рериха в исполнении автора"</a></h3></li></ul>
+					</div>
+				</div>
+				<div class="clear"></div>	
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-inn">
+			<div class="footer-inner">
+				<p class="copy">&copy; gosfilmofond.ru, 2006-2013</p>
+				<div class="footer-inside">
+					<div class="footer-inside-left">
+						<p>Адрес: 142050, Московская обл., г. Домодедово, мкр. Белые Столбы, проспект Госфильмофонда, "Владение Госфильмофонда" <a href="/about/contact" title="">посмотреть на карте</a></p>
+						<p>Телефон: 8 (495) 276-33-88, 8 (499) 941-06-81, 8 (496) 796-31-96 Факс: 8(495)276-33-92 E-mail: gff@gff-rf.ru</p>
+					</div>
+					<div class="footer-inside-right">
+
+					<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter18014659 = new Ya.Metrika({id:18014659, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/18014659" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+						<!--<a href="#" title=""><img src="/images/meter.gif" width="88" height="31" alt="" title="" /></a> -->
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
