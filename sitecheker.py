@@ -1,8 +1,7 @@
-#!/usr/local/python python3.3
+#!/usr/local/bin/python3.3
 # -*- coding: utf-8 -*-
 
 import collections
-import time
 import os
 from tools import Site, Cache, Difference, StatusINI, Twitter, SiteChekerCFG
 
