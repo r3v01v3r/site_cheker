@@ -409,3 +409,8 @@ class SiteChekerCFG:
 
         return setting
 
+class SMS:
+    
+    def send_sms(self, msg):
+        pass
+
