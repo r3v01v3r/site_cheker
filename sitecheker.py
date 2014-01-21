@@ -16,7 +16,6 @@ status_ini = StatusINI()
 sites_status_dict = collections.defaultdict(dict)
 report = 0
 print('console')
-while True:
 
     for project_name in all_project_names:
         if site.is_it_first_load_of_project(project_name) == True:
@@ -27,10 +26,7 @@ while True:
         else:
             continue
     
-    delta_time_in_seconds = (int(site_cheker_cfg.get_setting_of_sitecheker
-                                 ('delta time')))
-    time.sleep(delta_time_in_seconds)
-    
+   
     for project_name in all_project_names:
         if site.get_status_code_of_site(project_name) == 200:
             if status_ini.is_algoritm_status_ON(project_name, 'different rows') == True:
