@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/local/python python3.3 
 # -*- coding: utf-8 -*- 
 
 import collections
