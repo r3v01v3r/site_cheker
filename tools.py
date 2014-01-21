@@ -70,7 +70,7 @@ class Site:
 
     def does_site_have_cache(self, project_name):
         filename = '{0}.cache'.format(project_name)
-        dir_name = '/cache'
+        dir_name = 'cache'
         try:
             file = open('{0}/{1}'.format(dir_name, filename),
                         'r', encoding='utf-8')
@@ -101,7 +101,7 @@ class Site:
 
     def is_it_first_load_of_project(self, project_name):
         try:
-            file = '/cache/{0}.cache'.format(project_name)
+            file = 'cache/{0}.cache'.format(project_name)
             open(file, 'r')
             return False
         except:
@@ -153,7 +153,7 @@ class Cache:
         site_content = site.get_site_content(project_name)
         filename = '{0}.cache'.format(project_name)
         dir_name = 'cache'
-        file = open('/{0}/{1}'.format(dir_name, filename), 'w', encoding='utf-8')
+        file = open('{0}/{1}'.format(dir_name, filename), 'w', encoding='utf-8')
 
         for line in range(0, len(site_content)):
             file.write('{0}\n'.format(str(site_content[line])))
@@ -183,7 +183,7 @@ class Cache:
     def get_site_cache(self, project_name):
         filename = '{0}.cache'.format(project_name)
         dir_name = 'cache'
-        file = open('/{0}/{1}'.format(dir_name, filename),
+        file = open('{0}/{1}'.format(dir_name, filename),
                      'r', encoding='utf-8')
         cache_text = []
 
