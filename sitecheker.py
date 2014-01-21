@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*- 
 
 import collections
-import pwd
 import time
 import os
 from tools import Site, Cache, Difference, StatusINI, Twitter, SiteChekerCFG
@@ -21,9 +20,7 @@ while True:
 
     for project_name in all_project_names:
         if site.is_it_first_load_of_project(project_name) == True:
-            os.makedirs('cache', 777)
-            uid, gid =  pwd.getpwnam('idoziru').pw_uid, pwd.getpwnam('www-data').pw_uid
-            os.chown('cache', uid, gid) # set user:group as root:www-data
+            os.makedirs('cache', 0o777)
             site.make_default_status_ini_for_site(project_name)
             status_ini.get_and_write_site_status(project_name)
             cache.make_site_cache(project_name)
