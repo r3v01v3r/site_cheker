@@ -1,3 +1,6 @@
+#!/usr/bin/env python 
+# -*- coding: utf-8 -*- 
+
 class Site:
 
     def get_all_project_names(self):
