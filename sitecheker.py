@@ -13,7 +13,6 @@ cache = Cache()
 difference = Difference()
 status_ini = StatusINI()
 sites_status_dict = collections.defaultdict(dict)
-report = 0
 print('console')
 
 for project_name in all_project_names:
@@ -55,12 +54,6 @@ for project_name in all_project_names:
         cache.get_site_cache(project_name)
     else:
         status_ini.get_and_write_site_status(project_name)
-
-report += 1
-
-if report%10 == 1:
-    msg = site.get_status_in_str_off_all_projects()
-    twitter.make_post_to_twitter_from_str(msg)
 
 for project_name in all_project_names:
     cache.make_site_cache(project_name)
