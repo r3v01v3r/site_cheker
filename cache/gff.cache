@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="#" />
 	<link href="/css/style_main.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
-        <style></style>
+
 	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<script type="text/javascript" src="/js/jquery.jcarousellite.min.js"></script>
@@ -19,14 +19,14 @@
 
             <script type="text/javascript">
             $(function() {
-
+href=sfdf
            $('#gallery a').lightBox();
             $('#gallery2 a').lightBox();
              });
 			 
-			$(document).ready(function() {
-				var offset_menu = $('.nav-top-line').offset();
-				$('.mtop').hover(function(){
+
+
+
 					var offset_item = $(this).offset();
 					var padding = (offset_menu.left-offset_item.left)%10;
 					$(this).css('background-position', padding+'px top,'+padding+'px bottom');
@@ -172,7 +172,7 @@
 <td>&nbsp;&nbsp;<a class="foto" href="/obj_files/9326_7.jpg"><img src="/obj_files/9326_4.jpg" alt="" width="209" height="200" /></a></td>
 </tr>
 </tbody>
-</table></br><font size = '1' color = '#fff'>Страница сгенерирована за 0.62 секунд !</font>
+</table></br><font size = '1' color = '#fff'>Страница сгенерирована за 1.04 секунд !</font>
                                                     </div>
 					</div>
 					<div class="news-outer">

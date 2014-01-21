@@ -1,0 +1,32 @@
+
+--------------------
+2014-01-21 23:00:58.395366
+[gff]: site_status=200
+href_counting=notOK
+hrefs_different=OK
+different_rows=notOK
+True
+
+--------------------
+2014-01-21 23:03:01.341125
+[gff]: site_status=200
+href_counting=notOK
+hrefs_different=OK
+different_rows=notOK
+True
+
+--------------------
+2014-01-21 23:05:22.702863
+[gff]: site_status=200
+href_counting=notOK
+hrefs_different=OK
+different_rows=notOK
+[[14], [22], [27, 29], [175]]
+
+--------------------
+2014-01-21 23:05:57.664873
+[gff]: site_status=200
+href_counting=notOK
+hrefs_different=OK
+different_rows=notOK
+[[14], [22], [27, 29], [175]]

@@ -1,10 +1,10 @@
 import collections
 import time
 import os
-from tools import Site, Cache, Difference, StatusINI, Twitter, SiteChekerCFG
+from tools import Site, Cache, Difference, StatusINI, Twitter, Config
 
 twitter = Twitter()
-site_cheker_cfg = SiteChekerCFG()
+site_cheker_cfg = Config()
 site = Site()
 all_project_names = site.get_all_project_names()
 cache = Cache()

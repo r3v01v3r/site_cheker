@@ -10,11 +10,12 @@ class Site:
         return config.sections()
 
 
-    def get_parametr_from_all_projects_cfg(self, project_name, parametr):
+    def get_bool_parametr_from_projects_cfg(self, project_name, parametr):
         import configparser
         config = configparser.ConfigParser()
         config.read('all_projects.cfg', encoding='utf-8')
-        return config[project_name][parametr]
+        return bool(config[project_name][parametr])
+
 
     def get_parametr_from_status_ini(self, project_name, parametr):
         import configparser
@@ -22,14 +23,18 @@ class Site:
         config.read('status.ini')
         return config[project_name][parametr]
 
+
     def get_site_link(self, project_name):
-        site_link = self.get_parametr_from_all_projects_cfg(project_name,'url')
+        import configparser
+        config = configparser.ConfigParser()
+        config.read('all_projects.cfg', encoding='utf-8')
+        site_link = config[project_name]['url']
         return site_link
 
 
     def get_site_content(self, project_name):
         import requests
-        site_link = self.get_parametr_from_all_projects_cfg(project_name,'url')
+        site_link = self.get_site_link(project_name)
         site_content = requests.get(site_link).text.splitlines()
         return site_content
 
@@ -54,16 +59,12 @@ class Site:
     def get_status_code_of_site(self, project_name):
         import requests
         import time
-        twitter = Twitter()
         link = self.get_site_link(project_name)
         site = requests.get(link)
         site_status_code = site.status_code
         if site_status_code != 200:
             time.sleep(60)
             site_status_code = site.status_code
-            msg = ('{0} status code probleb >>> {1}'
-                   .format(project_name, site_status_code))
-            twitter.make_post_to_twitter_from_str(msg)
             return site_status_code
         return site_status_code
 
@@ -99,6 +100,7 @@ class Site:
         with open('status.ini', 'w') as file:
             status_ini.write(file)
 
+
     def is_it_first_load_of_project(self, project_name):
         try:
             file = 'cache/{0}.cache'.format(project_name)
@@ -108,7 +110,7 @@ class Site:
             return True
 
 
-    def how_much_href_on_site(self, project_name):
+    def how_much_hrefs_on_site(self, project_name):
         import re
         site_content = self.get_site_content(project_name)
         find_href = re.compile('href=\S*')
@@ -201,7 +203,7 @@ class Cache:
         return when_does_chache_maked[0]
 
 
-    def how_much_href_in_cache(self, project_name):
+    def how_much_hrefs_in_cache(self, project_name):
         import re
         cache_content = self.get_site_cache(project_name)
         find_href = re.compile('href=\S*')
@@ -352,18 +354,18 @@ class StatusINI:
 
 
 
-        status_ini.set(project_name, 'different rows',
+        status_ini.set(project_name, 'different_rows',
                        str(list_of_differet_rows[3:]))
 
         with open('status.ini', 'w') as configfile:
             status_ini.write(configfile)
 
 
-    def write_href_status_to_ini(self, project_name, href_status):
+    def write_href_status_to_ini(self, project_name, hrefs_different):
         import configparser
         status_ini = configparser.ConfigParser()
         status_ini.read('status.ini')
-        status_ini.set(project_name, 'href status', href_status)
+        status_ini.set(project_name, 'hrefs_different', hrefs_different)
         with open('status.ini', 'w') as configfile:
             status_ini.write(configfile)
 
@@ -402,7 +404,7 @@ class Twitter:
         twitter.update_status(status=msg)
 
 
-class SiteChekerCFG:
+class Config:
 
     def get_setting_of_sitecheker(self, setting):
         import configparser
