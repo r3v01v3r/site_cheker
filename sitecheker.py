@@ -20,7 +20,7 @@ while True:
 
     for project_name in all_project_names:
         if site.is_it_first_load_of_project(project_name) == True:
-            os.makedir('cache')
+            os.makedirs('cache', 777)
             site.make_default_status_ini_for_site(project_name)
             status_ini.get_and_write_site_status(project_name)
             cache.make_site_cache(project_name)
