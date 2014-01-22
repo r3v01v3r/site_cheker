@@ -36,7 +36,8 @@ for project_name in all_project_names:
         os.mkdir('cache', 0o777)
         site.make_default_status_ini_for_site(project_name)
         status_ini.get_and_write_site_status(project_name)
-        log.write(site.get_parametr_from_status_ini(project_name, 'site status'))
+        log.write(project_name)
+        log.write(site.get_status_code_of_site(project_name))
         cache.make_site_cache(project_name)
         break
     else:
@@ -46,7 +47,7 @@ sms_msg = ''
 
 for project_name in all_project_names:
     twitter_msg = ''
-    twitter_msg += '[{0}]: '.format(project_name)
+    twitter_msg += '[{0}]: \n'.format(project_name)
 
     # site_status
     try:
