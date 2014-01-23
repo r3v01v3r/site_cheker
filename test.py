@@ -1,7 +1,7 @@
 import collections
 import time
 import os
-from tools import Site, Cache, Difference, Twitter, Config
+from tools import Site, Cache, Difference, Twitter, Config, LogFile
 
 twitter = Twitter()
 site_cheker_cfg = Config()
@@ -13,5 +13,5 @@ sites_status_dict = collections.defaultdict(dict)
 report = 0
 
 
-file = open('logs/main_log.html', 'r', encoding='utf-8')
-print(file.read())
+log_file = LogFile()
+log_file.write_to_start_of_log('sdsd')

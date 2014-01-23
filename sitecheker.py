@@ -5,7 +5,7 @@ import collections
 import os
 import sys
 import shutil
-from tools import Site, Cache, Difference, Twitter, Config
+from tools import Site, Cache, Difference, Twitter, Config, LogFile
 
 twitter = Twitter()
 config = Config()
@@ -14,28 +14,24 @@ all_project_names = site.get_all_project_names()
 cache = Cache()
 difference = Difference()
 sites_status_dict = collections.defaultdict(dict)
+log_file = LogFile()
 
 print('console')
+log_msg = ''
 
 # определяем первый это запуск скрипта или нет
 try:
     # не первый запуск
     log = open('logs/main_log.html', 'r', encoding='utf-8')
     log = open('logs/main_log.html', 'a', encoding='utf-8')
-    log_date = '{0}\n<br>\n<br>'.format(datetime.datetime.now())
-    log.write('\n<br>')
-    log.write('-' * 20)
-    log.write('\n<br>')
-    log.write(log_date)
+    log_date = '\n<br>{0}'.format(datetime.datetime.now())
+    log_msg = log_date + '\n<br>' + '-' * 20
 except:
     # первый запуск
     os.mkdir('logs', 0o777)
     log = open('logs/main_log.html', 'w', encoding='utf-8')
-    log.write('\n<br>')
-    log.write('-' * 20)
-    log.write('\n<br>')
-    log_date = '{0}\n<br>\n<br>'.format(datetime.datetime.now())
-    log.write(log_date)
+    log_date = '\n<br>{0}'.format(datetime.datetime.now())
+    log_msg = log_date + '\n<br>' + '-' * 20
 
 # елси папки cache нет, создает ее
 try:
@@ -44,15 +40,14 @@ except:
     pass
 
 for project_name in all_project_names:
-    log_msg = ''
+
     # если это первый запуск для сайта, то только создает кэш
     if site.is_it_first_load_of_project(project_name) == True:
         cache.make_site_cache(project_name)
-        log_msg += '[{0}]: \n<br>'.format(project_name)
-        log_msg += 'first start of project\n<br>\n<br>'
-        log.write(log_msg)
+        log_msg += '\n<br>[{0}]: \n<br>'.format(project_name)
+        log_msg += 'first start of project\n<br>'
     else:
-        log_msg += '[{0}]: \n<br>'.format(project_name)
+        log_msg += '\n<br>[{0}]: \n<br>'.format(project_name)
         # site_status
         try:
             site_status = site.get_status_code_of_site(project_name)
@@ -97,9 +92,9 @@ for project_name in all_project_names:
         except:
             continue
         # logging
-        log_msg = log_msg
-        log.write(log_msg)
-        log.write('\n<br>\n<br>')
+
+log_msg = log_msg + '\n<br>'
+log_file.write_to_start_of_log(log_msg)
 
 log.close()
 

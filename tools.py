@@ -286,3 +286,16 @@ class SMS:
 
     def send_sms(self, msg):
         pass
+
+
+class LogFile:
+
+    def write_to_start_of_log(self, log_msg):
+        log_file = open('logs/main_log.html', 'r', encoding='utf-8')
+        logs_in_list = log_file.readlines()
+        log_msg += '\n'
+        logs_in_list.insert(0, log_msg)
+        log_file.close()
+        log_file = open('logs/main_log.html', 'w', encoding='utf-8')
+        log_file.writelines(logs_in_list)
+        log_file.close()
