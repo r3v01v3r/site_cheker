@@ -24,13 +24,13 @@ try:
     # не первый запуск
     log = open('logs/main_log.html', 'r', encoding='utf-8')
     log = open('logs/main_log.html', 'a', encoding='utf-8')
-    log_date = '\n<br>{0}'.format(datetime.datetime.now().strftime("d% %m %y %H:%M"))
+    log_date = '\n<br>{0}'.format(datetime.datetime.now().strftime("%d %m %y %H:%M"))
     log_msg = log_date + '\n<br>' + '-' * 20
 except:
     # первый запуск
     os.mkdir('logs', 0o777)
     log = open('logs/main_log.html', 'w', encoding='utf-8')
-    log_date = '\n<br>{0}'.format(datetime.datetime.now().strftime("d% %m %y %H:%M"))
+    log_date = '\n<br>{0}'.format(datetime.datetime.now().strftime("%d %m %y %H:%M"))
     log_msg = log_date + '\n<br>' + '-' * 20
 
 # елси папки cache нет, создает ее
