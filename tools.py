@@ -17,11 +17,7 @@ class Site:
         return bool(config[project_name][parametr])
 
 
-    def get_parametr_from_status_ini(self, project_name, parametr):
-        import configparser
-        config = configparser.ConfigParser()
-        config.read('status.ini')
-        return config[project_name][parametr]
+
 
 
     def get_site_link(self, project_name):
@@ -81,24 +77,10 @@ class Site:
             return False
 
 
-    def make_default_status_ini_for_sites(self, all_project_names):
-        import configparser
-        status_ini = configparser.ConfigParser()
-
-        for project_name in all_project_names:
-            status_ini.add_section(project_name)
-
-        with open('status.ini', 'w') as file:
-            status_ini.write(file)
 
 
-    def make_default_status_ini_for_site(self, project_name):
-        import configparser
-        status_ini = configparser.ConfigParser()
-        status_ini.read('status.ini')
-        status_ini.add_section(project_name)
-        with open('status.ini', 'w') as file:
-            status_ini.write(file)
+
+
 
 
     def is_it_first_load_of_project(self, project_name):
@@ -148,8 +130,6 @@ class Site:
 class Cache:
 
     def make_site_cache(self, project_name):
-        import datetime
-        import configparser
         import re
         site = Site()
         site_content = site.get_site_content(project_name)
@@ -160,19 +140,11 @@ class Cache:
         for line in range(0, len(site_content)):
             file.write('{0}\n'.format(str(site_content[line])))
         file.close
-        time_of_cache = datetime.datetime.now()
 
         find_href = re.compile('href=\S*')
         count_href_in_cache = 0
         for line in site_content:
             count_href_in_cache += len(find_href.findall(line))
-
-        status_ini = configparser.ConfigParser()
-        status_ini.read('status.ini')
-        status_ini.set(project_name, 'cache time', str(time_of_cache))
-        status_ini.set(project_name, 'href count in cache', str(count_href_in_cache))
-        with open('status.ini', 'w') as file:
-            status_ini.write(file)
 
 
     def make_sites_caches(self):
@@ -264,16 +236,6 @@ class Difference:
         return difference_row_list
 
 
-    def chek_site_for_row_difference_and_write_to_status_ini(self, project_name):
-
-        status_ini = StatusINI()
-        difference = Difference()
-
-        difference_row_list = difference.row_difference_to_list(project_name)
-
-        status_ini.write_difference_rows_to_status_ini(project_name, difference_row_list)
-
-
     def chek_for_href_count_change(self, project_name):
         site = Site()
         cache = Cache()
@@ -306,78 +268,6 @@ class Difference:
                 new_hrefs.append(href)
 
         return(new_hrefs)
-
-
-class StatusINI:
-
-    def get_and_write_sites_status(self):
-        import configparser
-
-        site = Site()
-        all_projects_name = site.get_all_project_names()
-        status_ini = configparser.ConfigParser()
-        status_ini.read('status.ini')
-
-        for project_name in all_projects_name:
-            site_status = site.get_status_code_of_site(project_name)
-            status_ini.set(project_name, 'site status', str(site_status))
-
-        with open('status.ini', 'w') as configfile:
-            status_ini.write(configfile)
-
-
-    def get_and_write_site_status(self, project_name):
-        import configparser
-        site = Site()
-        status_ini = configparser.ConfigParser()
-        status_ini.read('status.ini')
-        site_status = site.get_status_code_of_site(project_name)
-        status_ini.set(project_name, 'site status', str(site_status))
-        with open('status.ini', 'w') as configfile:
-            status_ini.write(configfile)
-
-
-    def write_difference_rows_to_status_ini(self, project_name, difference_row_list):
-        import configparser
-        status_ini = configparser.ConfigParser()
-        status_ini.read('status.ini')
-        list_of_differet_rows = ' '
-        row_list = []
-        for rows in difference_row_list:
-            if len(rows) > 1:
-                short_list_of_differet_rows = '{0} - {1}'.format(rows[0], rows[1])
-                row_list.append(short_list_of_differet_rows)
-                list_of_differet_rows = '{0}, {1}'.format(list_of_differet_rows, str(row_list))
-                row_list = []
-            elif len(rows) == 1:
-                list_of_differet_rows = '{0}, {1}'.format(list_of_differet_rows, rows)
-
-
-
-        status_ini.set(project_name, 'different_rows',
-                       str(list_of_differet_rows[3:]))
-
-        with open('status.ini', 'w') as configfile:
-            status_ini.write(configfile)
-
-
-    def write_href_status_to_ini(self, project_name, hrefs_different):
-        import configparser
-        status_ini = configparser.ConfigParser()
-        status_ini.read('status.ini')
-        status_ini.set(project_name, 'hrefs_different', hrefs_different)
-        with open('status.ini', 'w') as configfile:
-            status_ini.write(configfile)
-
-
-    def is_algoritm_status_ON(self, project_name, algoritm_name):
-        import configparser
-        status_ini = configparser.ConfigParser()
-        status_ini.read('all_projects.cfg')
-        algoritm_status = status_ini[project_name][algoritm_name]
-        return bool(algoritm_status)
-
-
 
 
 class Twitter:

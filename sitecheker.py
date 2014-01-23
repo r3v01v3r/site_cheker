@@ -4,7 +4,7 @@ import datetime
 import sys
 import collections
 import os
-from tools import Site, Cache, Difference, StatusINI, Twitter, Config
+from tools import Site, Cache, Difference, Twitter, Config
 
 twitter = Twitter()
 config = Config()
@@ -12,7 +12,6 @@ site = Site()
 all_project_names = site.get_all_project_names()
 cache = Cache()
 difference = Difference()
-status_ini = StatusINI()
 sites_status_dict = collections.defaultdict(dict)
 
 print('console')
@@ -34,10 +33,8 @@ except:
 for project_name in all_project_names:
     if site.is_it_first_load_of_project(project_name) == True:
         os.mkdir('cache', 0o777)
-        site.make_default_status_ini_for_site(project_name)
-        status_ini.get_and_write_site_status(project_name)
         log.write(project_name)
-        log.write(site.get_status_code_of_site(project_name))
+        log.write(str(site.get_status_code_of_site(project_name)))
         cache.make_site_cache(project_name)
         break
     else:

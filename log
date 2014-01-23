@@ -1,45 +1,9 @@
 
 --------------------
-2014-01-22 22:24:28.053108
-[gff]: 
-site_status=200
-href_counting=OK
-hrefs_different=OK
-different_rows=notOK
-[[10], [20], [38, 39], [175]]
+2014-01-23 08:02:24.436717
+gff200
+--------------------
+2014-01-23 08:03:20.575320
 
 --------------------
-2014-01-22 22:24:47.639344
-[gff]: 
-site_status=200
-href_counting=OK
-hrefs_different=OK
-different_rows=notOK
-[[10], [20], [38, 39], [175]]
-
---------------------
-2014-01-22 22:30:55.790413
-[gff]: 
-site_status=200
-href_counting=OK
-hrefs_different=OK
-different_rows=notOK
-[[10], [20], [38, 39], [175]]
-
---------------------
-2014-01-22 22:34:09.848678
-[gff]: 
-site_status=200
-href_counting=OK
-hrefs_different=OK
-different_rows=notOK
-[[10], [20], [38, 39], [175]]
-
---------------------
-2014-01-22 22:35:23.563574
-[gff]: 
-site_status=200
-href_counting=OK
-hrefs_different=OK
-different_rows=notOK
-[[10], [20], [38, 39], [175]]
+2014-01-23 08:05:51.772240
