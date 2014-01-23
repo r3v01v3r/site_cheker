@@ -104,7 +104,7 @@ for project_name in all_project_names:
 log.close()
 
 try:
-    shutil.copyfile('logs/main_log.html', '/var/www/index.html')
+    shutil.copyfile('logs/main_log.html', '/var/www/main_log.html')
 except:
     pass
 
