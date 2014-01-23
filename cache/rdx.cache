@@ -1,0 +1,673 @@
+						
+	    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+
+        <title>Компания РЕДОКС -  сканирование документов и их обработка  на всех стадиях  жизненного цикла. Услуги сканирования всех видов.</title>
+        <link href="/favicon.ico" rel="shortcut icon" type="type=image/x-icon">
+        <link rel="stylesheet" href="/css/main2.css" />
+        <link rel="stylesheet" href="/css/style-call-back.css" />
+        <link rel="stylesheet" href="/css/validationEngine.jquery.css" />
+        <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+        
+        <script type="text/javascript" src="/js/js.js"></script>
+        <script type="text/javascript" src="/js/jquery.validationEngine-ru.js"></script>
+        <script type="text/javascript" src="/js/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="/js/jquery.maskedinput-1.3.js"></script>
+        <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+       
+        <script type="text/javascript" src="/js/jquery.carouFredSel-6.1.0-packed.js"></script>
+		<!-- <script>
+			jQuery.noConflict();
+		</script> -->
+        <script type="text/javascript" src="/js/cycle.js"></script>
+        <script type="text/javascript" src="/js/jquery.dropdownPlain.js"></script>
+        <script type="text/javascript" src="/js/page.js"></script>
+        
+     
+		<!--[if IE]><link rel="stylesheet" href="/css/forie.css" /><![endif]-->
+    </head>
+    <body>
+  
+   	<!-- Окно обратного звонка -->
+	<!--Добавить после тега <body>-->
+    <!--form hide-->
+    <div id="form-fone"></div>
+    <div id="form-hide">
+    	<div id="form-left">
+        	<div id="form-close"></div>
+        </div>
+        <div id="form-right">
+        	<form action="/send/send.php" method="post">
+            	<div class="form-input">
+                	<label for="form-name">Ваше имя</label>
+                    <input id="form-name" class="validate[required,minSize[3]]" name="name" type="text" placeholder="Алексей Дмитриевич" />
+                </div>
+                <div class="form-separator"></div>
+                <div class="form-input">
+                	<label for="form-phone">Телефон</label>
+                    <input id="form-phone" class="validate[required,custom[phone]]" name="phone" type="text" placeholder="(922) 532-17-24" />
+                </div>
+                <div class="form-separator"></div>
+                <div class="form-input">
+                	<textarea id="form-comment" name="comment" class="validate[required,minSize[10]]" placeholder="Напишите нам ваш вопрос или удобное время для звонка"></textarea>
+                </div>
+                <div class="form-separator"></div>
+                <div class="form-input">
+                	<input id="form-send" name="send" type="submit"  value=" " />
+                </div>
+                <input id="form-last-name" name="last-name" type="text" />
+            </form>
+          	<h3 id="form-mess-result"></h3>
+        	<img id="form-loader" src="/images/form-loader.png" width="50" height="50" alt="load" />
+        </div>
+    </div><!--/form hide-->
+    
+    <!--form full-->
+    <div id="form-fone-full"></div>
+    <div id="form-full">
+    	<div id="form-left">
+        	<div id="form-close"></div>
+        </div>
+        <div id="form-right">
+        	<form action="/send/send.php" method="post">
+            	<div class="form-input">
+                	<label for="form-name">Ваше имя</label>
+                    <input id="form-name" class="validate[required,minSize[3]]" name="name" type="text" placeholder="Алексей Дмитриевич" />
+                </div>
+                <div class="form-separator"></div>
+                <div class="form-input">
+                	<label for="form-phone">Телефон</label>
+                    <input id="form-phone" class="validate[required,custom[phone]]" name="phone" type="text" placeholder="(922) 532-17-24" />
+                </div>
+                <div class="form-separator"></div>
+                <div class="form-input">
+                	<textarea id="form-comment" class="validate[required,minSize[10]]" placeholder="Напишите нам ваш вопрос и удобное время для звонка"></textarea>
+                </div>
+                <div class="form-separator"></div>
+                <div class="form-input">
+                	<input id="form-send" name="send"  value=" " />
+                </div>
+                <input id="form-last-name" name="last-name" type="text" />
+            </form>
+            <h3 id="form-mess-result"></h3>
+            <img id="form-loader" src="/images/form-loader.png" width="50" height="50" alt="load" /> 
+        </div>
+    </div><!--/form full-->
+    <!--/Добавить после тега <body>-->  
+    
+        <div class="header">
+            <div class="top">
+                <a href="#" id="logo"></a>
+                <div class="contacts">
+                    <p class="phone">+7 (495) 646-26-77</p>
+                    <p class="email">inf@redocs.ru</p>
+                </div>
+                <form class="login" method="POST" action="">
+                    <input type="text" name="login" placeholder="Логин" />
+                    <input type="password" name="login" placeholder="Пароль" />
+                    <input type="submit" value="Вход для клиентов" />
+                </form>
+            </div>
+            <div class="nav">
+                <ul class="dropdown">
+<li><a href='/company/about/'>О компании</a></li><li><a href='/service/'>Услуги</a><ul>
+  <li>
+      <a href='/service/raspoznavaniey_i_ocifrovka_knig/'>Распознавание и оцифровка книг</a>  
+  </li>
+  <li>
+      <a href='/service/scan/'>Сканирование</a>  
+<ul>
+    <li>
+        <a href='/service/scan/book/'>Сканирование книг</a>  
+    </li>
+    <li>
+        <a href='/service/scan/doc/'>Потоковое сканирование</a>  
+    </li>
+    <li>
+        <a href='/service/scan/foto/'>Сканирование фотографий</a>  
+    </li>
+    <li>
+        <a href='/service/scan/wide/'>Широкоформатное сканирование</a>  
+    </li>
+    <li>
+        <a href='/service/scan/drawing/'>Сканирование чертежей</a>  
+    </li>
+    <li>
+        <a href='/service/scan/slide/'>Сканирование слайдов</a>  
+    </li>
+</ul>
+  </li>
+  <li>
+      <a href='/service/recog/'>Распознавание документов</a>  
+  </li>
+  <li>
+      <a href='/service/elar/'>Создание электронного архива</a>  
+  </li>
+  <li>
+      <a href='/service/enter/'>Ввод данных</a>  
+  </li>
+  <li>
+      <a href='/service/form_processing/'>Обработка анкет</a>  
+  </li>
+  <li>
+      <a href='/service/bibl/'>Создание электронных библиотек</a>  
+  </li>
+  <li>
+      <a href='/service/preob/'>Преобразование информации</a>  
+  </li>
+  <li>
+      <a href='/service/ebook/'>Создание электронных книг</a>  
+  </li>
+  <li>
+      <a href='/service/ecat/'>Создание электронного каталога</a>  
+  </li>
+  <li>
+      <a href='/service/outsoursing/'>Аутсорсинг бизнес процессов</a>  
+  </li>
+  <li>
+      <a href='/service/staff/'>Аутстаффинг</a>  
+  </li>
+</ul>
+</li><li><a href='/solution/'>Решения</a><ul>
+    <li>
+        <a href='/solution/archive/'>Для архивов</a>  
+    </li>
+    <li>
+        <a href='/solution/bibl/'>Для библиотек</a>  
+    </li>
+    <li>
+        <a href='/solution/admap/'>Для организаций</a>  
+<ul>
+      <li>
+          <a href='/solution/buh/'>Для бухгалтерии</a>  
+      </li>
+      <li>
+          <a href='/solution/finance/'>Для финансовых структур</a>  
+      </li>
+      <li>
+          <a href='/solution/izdat/'>Для издательств и типографий</a>  
+      </li>
+      <li>
+          <a href='/solution/law/'>Для юридических организаций</a>  
+      </li>
+      <li>
+          <a href='/solution/rekrut/'>Для кадровых агентств</a>  
+      </li>
+</ul>
+    </li>
+    <li>
+        <a href='/solution/gos/'>Для государственного сектора</a>  
+<ul>
+      <li>
+          <a href='/solution/bti/'>Для БТИ и регистрационных палат</a>  
+      </li>
+</ul>
+    </li>
+    <li>
+        <a href='/solution/obr/'>Для институтов и университетов</a>  
+    </li>
+    <li>
+        <a href='/solution/project/'>Для проектых организаций</a>  
+    </li>
+    <li>
+        <a href='/solution/student/'>Для студентов</a>  
+    </li>
+</ul>
+</li><li><a href='/price/'>Цены</a></li><li><a href='/e-arch/'>E-Arch</a></li><li><a href='/news/'>Новости</a></li><li><a href='/articles/'>Статьи</a><ul>
+            <li>
+                <a href='/articles/Kak_otskanirovat_chertegi_bolshogo_razmera/'>Как отсканировать чертежи большого размера?</a>  
+            </li>
+            <li>
+                <a href='/articles/9576/'>Распознать документ</a>  
+            </li>
+            <li>
+                <a href='/articles/9575/'>Оцифровка документов</a>  
+            </li>
+            <li>
+                <a href='/articles/9574/'>Отсканировать документы</a>  
+            </li>
+            <li>
+                <a href='/articles/skanirovanie_i_ocifrovka_knig/'>Сканирование и оцифврока книг</a>  
+            </li>
+            <li>
+                <a href='/articles/9573/'>Организация электронного архива</a>  
+            </li>
+            <li>
+                <a href='/articles/sozadanie_electronnih_knig/'>Создание электронных книг</a>  
+            </li>
+            <li>
+                <a href='/articles/napisannoe_na_bumage_stanovitsya_virtualnym/'>Написанное на бумаге становится виртуальным</a>  
+            </li>
+            <li>
+                <a href='/articles/9572/'>Организация архива электронных документов</a>  
+            </li>
+            <li>
+                <a href='/articles/osnovnie_pricipi_skanirovaniya_dokumentov/'>Основные принципы сканирования документов</a>  
+            </li>
+            <li>
+                <a href='/articles/9577/'>Сканирование и распознавание текста</a>  
+            </li>
+            <li>
+                <a href='/articles/skanirovanie_proektnoy_documentacii/'>От бумаги к цифре – сканирование проектной документации</a>  
+            </li>
+            <li>
+                <a href='/articles/electronniy_archive_dokumentov_dlyz_ofisa/'>Электронный архив - условие эффективной работы офиса</a>  
+            </li>
+            <li>
+                <a href='/articles/uslugi_po_vvodu_dannih/'>Услуги по вводу данных</a>  
+            </li>
+            <li>
+                <a href='/articles/osobennosti_skanirovaniya_shitih_dokumentov/'>Особенности сканирования сшитых документов</a>  
+            </li>
+            <li>
+                <a href='/articles/Dostoinstva_electronnogo_arhiva_pered_bumazhnymi_nositelyami/'>Достоинства электронного архива перед бумажными носителями</a>  
+            </li>
+            <li>
+                <a href='/articles/skanirovanie_knig/'>Сканирование книг</a>  
+            </li>
+            <li>
+                <a href='/articles/professionalnoe_skanirovanie_dokumentov/'>Проф. сканирование документов</a>  
+            </li>
+            <li>
+                <a href='/articles/9580/'>Сканирование текста с распознаванием</a>  
+            </li>
+            <li>
+                <a href='/articles/9579/'>Услуги по сканированию документов</a>  
+            </li>
+            <li>
+                <a href='/articles/9578/'>Сканировать текст</a>  
+            </li>
+            <li>
+                <a href='/articles/usluga_skanirovaniya_chertegey/'>Услуга сканирование чертежей</a>  
+            </li>
+            <li>
+                <a href='/articles/skanorivanie_chertegey/'>Почему мы занимаемся сканированием чертежей</a>  
+            </li>
+            <li>
+                <a href='/articles/uslugi_skanirovaniya_dokumentov/'>Услуги по сканированию документов</a>  
+            </li>
+            <li>
+                <a href='/articles/Scanirovanie_knig_osobennosti_processa/'>Сканирование книг - особенности процесса</a>  
+            </li>
+            <li>
+                <a href='/articles/scanirovanie_a0_a1_a2_i_a3/'>Сканирование чертежей А0, А1, А2 и А3</a>  
+            </li>
+            <li>
+                <a href='/articles/sozdaniye_electronnih_knig_v_companii_redocs/'>Создание электронных книг в компании "РЕДОКС"</a>  
+            </li>
+            <li>
+                <a href='/articles/Novinki_skaniruyuschego_oborudovaniya/'>Новинки сканирующего оборудования</a>  
+            </li>
+            <li>
+                <a href='/articles/Process_sozdaniya_electronnogo_arhiva_dokumentacii/'>Процесс создания электронного архива документации</a>  
+            </li>
+            <li>
+                <a href='/articles/scanirovanie_foto_soveti_i_recomendacii/'>Сканирование фото: советы и рекомендации</a>  
+            </li>
+            <li>
+                <a href='/articles/Udobstvo_ocifrovki_knig/'>Удобство оцифровки книг</a>  
+            </li>
+            <li>
+                <a href='/articles/Ocifrovka_knig/'>Оцифровка книг</a>  
+            </li>
+            <li>
+                <a href='/articles/Vozmognosti_kachestvennogo_scanirovaniya_documentov/'>Возможности качественного сканирования документов</a>  
+            </li>
+            <li>
+                <a href='/articles/ePub/'>Создание электронных книг как эффективный способ донесения информации</a>  
+            </li>
+            <li>
+                <a href='/articles/Scanirovanie_documentov/'>Сканирование документов</a>  
+            </li>
+            <li>
+                <a href='/articles/Dostoinstva_elektronnogo_arhiva_pered_bumazhnymi_nositelyami/'>Достоинства электронного архива перед бумажными носителями</a>  
+            </li>
+            <li>
+                <a href='/articles/Ocifrovka_starih_knig/'>Оцифровка старых книг</a>  
+            </li>
+            <li>
+                <a href='/articles/plusi_professionalnogo_skanirovaniya/'>В чем плюсы профессионального сканирования документов</a>  
+            </li>
+            <li>
+                <a href='/articles/vozmognosti_kachestvennogo_skanirovaniya_dokumentov/'>Возможности качественного сканирования документов</a>  
+            </li>
+            <li>
+                <a href='/articles/Otsifrovka_knig/'>Оцифровка книг</a>  
+            </li>
+            <li>
+                <a href='/articles/Osobennosti_scanirovaniya_chertezhey/'>Особенности сканирования чертежей</a>  
+            </li>
+            <li>
+                <a href='/articles/sozdanie_electronnih_arhivov/'>Создание электронных архивов</a>  
+            </li>
+            <li>
+                <a href='/articles/skanirovanie_slognih_dokumentov/'>Сканирование сложных документов. Помощь профессионалов</a>  
+            </li>
+            <li>
+                <a href='/articles/9617/'>Услуга оцифровки книг</a>  
+            </li>
+            <li>
+                <a href='/articles/cifrovaya_obrabotka_anket_i_vvod_dannih/'>Обработка анкет: информация должна быть точной и своевременной</a>  
+            </li>
+</ul>
+</li><li><a href='/company/kontact/'>Контакты</a></li> 
+                </ul>
+               <form class="search" method="get" action="/">
+                    <!--<input type="text" name="search" placeholder="Поиск по сайту" />-->
+                    	<input name="txt" class="tx" type="text" value="поиск по сайту" onfocus="if(this.value=='поиск по сайту') {this.value='';}" onblur="javascript:if(this.value==''){this.value='поиск по сайту'};"  />
+                                                        <input name=type type="hidden" value= 'doc_by_txt'/>
+                                                        <input name=action type="hidden" value= 'search'/>
+							<input class="submit" type="submit" value="" />
+                    
+                    
+                    
+                </form>
+            </div>
+           <ul class="cat">
+                 <li><a href="/service/scan/">СКАНИРОВАНИЕ</a></li>
+                <li><a href="/service/form_processing/">ОБРАБОТКА АНКЕТ</a></li>
+                <li><a href="/service/elar/">ЭЛЕКТРОННЫЙ АРХИВ</a></li>
+                <li><a href="/service/recog/">РАСПОЗНАВАНИЕ ТЕКСТА</a></li>
+                <li><a href="/service/enter/">ВВОД ДАННЫХ</a></li>
+                <li><a href="/service/ebook/">ЭЛЕКТРОННЫЕ КНИГИ</a></li>
+                <li><a href="/e-arch/">E-ARCH</a></li>
+                <li><a href="/service/scan/wide/">ШИРОКОФОРМАТНОЕ СКАНИРОВАНИЕ</a></li>
+
+            </ul>
+        </div>
+		<div class="container">
+            <div class="slideshow">
+				<div id="s4" class="slide-img">
+                    <div class="slide"><img src='/images/slide1.jpg' alt='Альтернативный текст' /></div>
+                    <div class="slide"><img src='/images/slide2.jpg' alt='Альтернативный текст' /></div>
+					<div class="slide"><img src='/images/slide3.jpg' alt='Альтернативный текст' /></div>
+				</div>
+            </div>
+            <div class="services">
+                <div class="first">
+                    <a href="/service/scan/">
+                    <img src="/images/servis-1.png" alt="" />
+                    <h4>Сканирование</h4><br> 
+                    <p>Все виды сканирования документов. <br>Любые документы и любые форматы.
+                    </p>
+                    <a href="/service/scan/" style = "text-decoration: underline">Подробнее</a>
+                    </a>
+                </div>
+                <div class="other">
+                    <a href="/service/enter/" >
+                     <img src="/images/servis-2.png" alt="" />
+                    <h4>Ввод данных</h4><br>
+                    <p>Ввод информации в любые информационные системы.<br> Обработка данных.</p>
+                    <a href="/service/enter/" style = "text-decoration: underline">Подробнее</a>
+                    </a>
+                </div>
+                <div class="other">
+                    <a href="/service/recog/">
+                     <img src="/images/servis-3.png" alt="" />
+                    <h4>Распознавание текста</h4>
+                    <p>Преобразование бумажных документов в электронный вид в форматы Word, PDF и т.д.
+                    </p>
+                    <a href="/service/recog/" style = "text-decoration: underline">Подробнее</a>
+                    </a>
+                </div>
+                <div class="last">
+                    <a href="/service/elar/">
+                     <img src="/images/servis-4.png" alt="" />
+                    <h4>Создание электронных архивов</h4>
+                    <p>Электронные архивы и библиотеки "под ключ" на базе собственной разработки E-Arch.
+                    </p>
+                    <a href="/service/elar/" style = "text-decoration: underline">Подробнее</a>
+                    </a>
+                </div>
+            </div>
+			<div class="wide-textbox">
+<h1>Компания РЕДОКС -  сканирование документов и их обработка  на всех стадиях  жизненного цикла. Услуги сканирования всех видов.</h1><p>Несмотря на повсеместное распространение электронных средств коммуникации, много информации все еще хранится на бумажных и других материальных носителях, поэтому ее преобразование в электронный вид остается актуальным. Обратившись к специалистам компании Redocs, вы получите качественные <a href="/service/scan/"><strong>услуги сканирования</strong></a>, распознавания, оцифровки исходных материалов, обработки данных и создания различных информационных систем. Мы работаем как с юридическими, так и с физическими лицами на всей территории Российской Федерации и в странах СНГ с выездом мобильных бригад наших сотрудников к заказчику.</p>
+<p>В зависимости от поставленной задачи наши специалисты выполняют как комплекс, так и каждый вид работ в отдельности:</p>
+<h2>Сканирование</h2>
+<p>С этого этапа начинается перевод документов в электронный вид.&nbsp; Мы предоставляем услуги сканирования:</p>
+<ul>
+<li>документов &mdash; в черно-белых тонах и в цвете</li>
+<li>книг &mdash; на специальных книжных сканерах, которые позволяют получить качественные электронные копии без повреждения оригиналов</li>
+<li>фотографий &mdash; с улучшением качества изображения</li>
+<li>чертежей, плакатов, схем, карт, а также других печатных материалов &mdash; размером от визитной карточки до формата А0 и больше</li>
+<li>картин и репродукций &mdash; с дополнительной защитой ветхих и ценных оригиналов</li>
+<li>фото- и кинопленки, слайдов и негативов, микроформ &mdash; с разрешением до 4000 точек.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Обработка больших объемов исходных материалов проводится конвейерным методом. Основные преимущества, которыми отличается поточное сканирование документов, &mdash; цена и скорость обработки оригиналов.</p>
+<h2>Распознавание текста</h2>
+<p>На данном этапе проводится преобразование&nbsp; отсканированного изображения в формат текстового редактора&nbsp; (txt, doc, pdf и т. д.) для дальнейшего редактирования текста, печати, распространения средствами электронных коммуникаций, загрузки в информационную систему, проведения контекстного поиска.</p>
+<p>Для эффективного распознавания текста с оригиналов любого качества и формата мы используем специализированное программное обеспечение и собственную методологию, обеспечивающую высокое качество результатов работы.</p>
+<h2>Ввод данных</h2>
+<p>Этот процесс заключается в формировании базы данных с последующим перенесением в различные локальные или сетевые информационные системы. В рамках этой услуги наши специалисты выполняют несколько видов работ:</p>
+<p>&nbsp;</p>
+<ul>
+<li>операторский ввод данных с бумажных и других материальных носителей в электронную систему</li>
+<li>обработку анкетных данных</li>
+<li>оцифровку анкет</li>
+<li>формирование описи атрибутов отсканированных документов для создания иерархической структуры, а также системы поиска.</li>
+</ul>
+<h2>Разработка информационных систем</h2>
+<p>В числе прочих задач специалисты нашей компании осуществляют <a href="/service/elar">создание электронных архивов</a> как на основе собственной разработки &mdash; системы E-Arch, так и программных продуктов зарубежного производства (EMC, IBM).&nbsp;</p>
+<p>&nbsp;</p>
+<p>Несмотря на внедрение систем электронного документооборота во многих организациях еще сохранились традиционные архивы. Они занимают много места и неудобны для:</p>
+<p style="margin-left: 30px;"><strong><br /></strong></p>
+<p style="margin-left: 30px;"><strong>хранения информации</strong>, так как бумажные документы стареют, изнашиваются, могут быть потеряны, испорчены или уничтожены</p>
+<p style="margin-left: 30px;"><strong>поиска необходимых сведений</strong>, вследствие ограниченного количества параметров поиска или при неправильном размещении документа в каталоге или на стеллажах</p>
+<p style="margin-left: 30px;"><strong>использования и передачи данны</strong>х, так как архивные материалы в большинстве случаев существуют в единственном экземпляре, с ними можно работать только в помещении архива и только одному человеку. Даже если провести <a href="http://www.redocs.ru/">сканирование документов</a>, без дальнейшей обработки электронная копия будет бесполезной.</p>
+<p>&nbsp;</p>
+<p><a href="/e-arch/">Система электронного архива</a> решает проблему хранения электронных документов, облегчает поиск информации и обеспечивает одновременный доступ&nbsp; большого количества пользователей к архивным материалам и каталогам, а кроме того, позволяет редактировать, печатать и распространять информацию.</p>
+<p>Мы также проводим:</p>
+<ul>
+<li>создание электронных&nbsp; библиотек</li>
+<li><a href="/service/scan/">сканирование</a> и оцифровку книг</li>
+<li>обработку электронных изображений и сохранение в любом формате</li>
+<li>сканирование и ретроконверсию каталогов</li>
+<li>аутсорсинг процессов, связанных с поточной обработкой документов и вводом данных</li>
+<li>разработку, доставку и установку программно-аппаратных комплексов для автоматизации обработки документов</li>
+<li>обучение и консалтинг.</li>
+</ul>
+<p>При этом компания <strong>Redocs</strong> не просто предоставляет услуги сканирования и другие, но и гарантирует:</p>
+<ul>
+<li>качественное сканирование документов цена которого остается приемлемой при любом объеме и сложности работ&nbsp;</li>
+<li>практический опыт, наработанный за годы деятельности, в том числе, при реализации международных проектов</li>
+<li>соблюдение конфиденциальности в отношении условий сотрудничества, персональных и других данных</li>
+<li>использование новейших технологий&nbsp; и современного оборудования для сканирования, распознавания текста, ввода данных и других работ</li>
+<li>обработку оригиналов&nbsp; любого размера, качества и в любом состоянии</li>
+<li>полную сохранность ветхих и ценных оригиналов.</li>
+</ul><p style = 'text-align: right;'><i></i></p></br><font size = '1' color = '#fff'>0.6 сек. !</font>
+			<!--	<h4>НОВЫЙ ТЕКСТОВЫЙ БЛОК</h4>
+				<p>
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение. Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение. Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+				</p>	
+				<p>
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+				</p>	
+				<p>
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+					Специальное предложение в честь первого мая. Акция предполагает большую скидку на другие акции, а так же еще какое-нибудь полезное или интересное предложение.
+					
+				</p> -->
+			</div>
+            <div class="textbox">
+                <div class="article">
+					<h4>ЧТО МЫ МОЖЕМ ВАМ ПРЕДЛОЖИТЬ?</h4>
+					<p>
+					Несмотря на широкое распространения электронного способа хранения информации, сегодня большинство информации созданной человеком хранится либо в бумажном виде, либо на <a href="#">другом твёрдом носителе</a>. При этом форма может быть разная, например: офисные документы, книги, журналы, фотографии, негативы и слайды, фото и киноплёнка, чертежи, картины, репродукции, плакаты, карты и т.д.
+					</p>
+					<p>
+					Практически нет ни одной организации в которой бы не присутствовал <a href="#">бумажный архив</a> в том или ином виде. Внедрение современных систем электронного документооборота не позволяет полностью избавиться от бумажных форм хранения. 
+					</p>
+                </div>
+                <div class="about">
+					<h4>ОТЗЫВЫ</h4>
+                
+<ul><div class='item'><p><i><p class="MsoNormal" style="text-indent: 18.0pt;">Brainpower - одна из ведущих компаний по подбору высококвалифицированного персонала среднего и высшего звена, работающая на российском рынке с начала 90-х. <br><b><a href = '/review/brainpower'></i><font  style = 'font-size: 10pt; font-weight: bold; color: #3A7359;'>читать далее >> </font></a></b></font></p><span>Ольга Субботина, Административный менеджер BrainPower CIS</span><div class='item'><p><i><p>&nbsp; &nbsp;Компания "Редокс" является партнером Intralinks в области создания виртуальных дата комнат и сканирования документов на территории России. <br><b><a href = '/review/9504'></i><font  style = 'font-size: 10pt; font-weight: bold; color: #3A7359;'>читать далее >> </font></a></b></font></p><span>Andrew Pearson, Managing director, EMEA</span><div class='item'><p><i><p>Хотим поблагодарить Вашу компанию за оперативную и слаженную работу. <br><b><a href = '/review/9532'></i><font  style = 'font-size: 10pt; font-weight: bold; color: #3A7359;'>читать далее >> </font></a></b></font></p><span>Гвинепадзе А.Д. Заместитель директора ФГУ ФИПС</span></ul>
+                </div>
+            </div>
+			<h4>НАШИ КЛИЕНТЫ</h4>
+			<div class="image_carousel">
+				<div class="products">
+					<img src="/images/clients/Administratciia_Leepetckoi_oblasti.jpg" alt='Клиент' />
+					<img src="/images/clients/domodedovo.jpg" alt='Клиент' />
+					<img src="/images/clients/BNT_Alliance.jpg" alt='Клиент' />
+					<img src="/images/clients/Centr_keldisha.jpg" alt='Клиент' />
+					<img src="/images/clients/Comunity_Inter.jpg" alt='Клиент' />
+					<img src="/images/clients/Diksi_finans.jpg" alt='Клиент' />
+					<img src="/images/clients/ESAR_Espro_arhiv.jpg" alt='Клиент' />
+					<img src="/images/clients/FGU_Center_vetirinarii.jpg" alt='Клиент' />
+					<img src="/images/clients/Gazprom_transgaz_Nizhnii_Novgorod.jpg" alt='Клиент' />
+					<img src="/images/clients/Fips_logo.jpg" alt='Клиент' />
+					<img src="/images/clients/Forensic_Risk_Alliance.jpg" alt='Клиент' />
+					<img src="/images/clients/Gos_istor_musey.jpg" alt='Клиент' />
+					<img src="/images/clients/Glavpromstroy.jpg" alt='Клиент' />
+					<img src="/images/clients/gosfilmfond.jpg" alt='Клиент' />
+					<img src="/images/clients/Haic_Pokrovskiy_ltd.jpg" alt='Клиент' />
+					<img src="/images/clients/HayGroup.jpg" alt='Клиент' />
+					<img src="/images/clients/ITG.jpg" alt='Клиент' />
+					<img src="/images/clients/Lising_vostok.jpg" alt='Клиент' />
+					<img src="/images/clients/mechel.jpg" alt='Клиент' />
+					<img src="/images/clients/MedConsult.jpg" alt='Клиент' />
+					<img src="/images/clients/Mejdunarodnaya_vistovochnaya_komp.jpg" alt='Клиент' />
+					<img src="/images/clients/metalloinvest.jpg" alt='Клиент' />
+					<img src="/images/clients/moscow_psihic_pedagogic_universitet.jpg" alt='Клиент' />
+					<img src="/images/clients/Mosmetrostroy.jpg" alt='Клиент' />
+					<img src="/images/clients/Nac_pensiya_fond.jpg" alt='Клиент' />
+					<img src="/images/clients/logo-izvestiya.jpg" alt='Клиент' />
+					<img src="/images/clients/Pechatniye-Tradicii.jpg" alt='Клиент' />
+					<img src="/images/clients/Brainpower_(BPI Group).jpg" alt='Клиент' />
+					<img src="/images/clients/Ross_ekonok_shkola.jpg" alt='Клиент' />
+					<img src="/images/clients/Sochi2014.jpg" alt='Клиент' />
+					<img src="/images/clients/Ross_goss_arhiv_nauchno_teh_doc.jpg" alt='Клиент' />
+					<img src="/images/clients/Trehgornaya_munufaktura.jpg" alt='Клиент' />
+					<img src="/images/clients/Yurayt.jpg" alt='Клиент' />
+					<img src="/images/clients/Tye_International.jpg" alt='Клиент' />
+					<img src="/images/clients/ZAO_hleb.jpg" alt='Клиент' />
+					<img src="/images/clients/IntraLinks_Inc..jpg" alt='Клиент' />
+				</div>
+				<div class="clearfix"></div>
+			</div>		
+            <div class="news">
+                <h4>НОВОСТИ</h4>
+				<div class="news-place">
+<ul><div><span>23.12.2013</span>
+        <a href = '/?action=news&idnews=43'>Новый сканер Fujitsu ScanSnap SV600</a>
+	</div><div><span>09.12.2013</span>
+        <a href = '/?action=news&idnews=41'>Сканирование документов с помощью необычной ручки</a>
+	</div><div><span>29.11.2013</span>
+        <a href = '/?action=news&idnews=40'>Достоинства электронного архива перед бумажными носителями</a>
+	</div><div><span>26.11.2013</span>
+        <a href = '/?action=news&idnews=39'>Эпоха сканеров</a>
+	</div><div><span>22.11.2013</span>
+        <a href = '/?action=news&idnews=38'>Широкоформатное сканирование чертежей. Особенности и преимущества</a>
+	</div></ul>
+                                 
+				</div>
+            </div>
+            <a class="bottom-banner" href="#">
+				<object type="application/x-shockwave-flash" data="/images/redocs.swf" width="812" height="47">
+					<param name="wmode" value="opaque">
+					<param name="movie" value="/images/redocs.swf" />
+				</object>
+			</a>
+		</div>
+		<div class="footer">
+			<div class="footer-place">
+				<div class='item first'>
+					<h6>О КОМПАНИИ</h6>
+					<ul>
+						<li><a href="/company/about/">О нас</a></li>
+						<li><a href="/company/mission/">Миссия</a></li>
+						<li><a href="/company/vacancy/">Вакансии</a></li>
+						<li><a href="/company/kontact/">Контакты</a></li>
+						<li><a href="/company/clients/">Наши клиенты</a></li>
+					</ul>
+				</div>
+				<div class='item'>
+					<h6>УСЛУГИ</h6>
+					<ul>
+                                                <li><a href="/price/">ЦЕНЫ</a></li>						
+                                                <li><a href="/service/scan/">Сканирование</a></li>
+						<li><a href="/service/elar/">Создание электронных архивов</a></li>
+						<li><a href="/service/recog/">Распознавание текста</a></li>
+						<li><a href="/service/enter/">Ввод данных</a></li>
+						<li><a href="/service/form_processing/">Обработка анкет</a></li>
+					</ul>
+				</div>
+				<div class='item'>
+					<h6>РЕШЕНИЯ</h6>
+					<ul>
+                                                <li><a href="http://www.e-arch.ru">E-ARCH</a></li>						
+                                                <li><a href="/solution/archive/">Для архивов</a></li>
+						<li><a href="/solution/bibl/">Для библиотек</a></li>
+						<li><a href="/solution/admap/">Для организаций</a></li>
+						<li><a href="/solution/project/">Для проектных организаций</a></li>
+						<li><a href="/solution/ministerstva/">Для государственного сектора</a></li>
+					</ul>
+				</div>
+                                <div class='counters'>
+<!--begin of Rambler's Top100 code -->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://counter.rambler.ru/top100.cnt?913470" alt="" width=1 height=1 border=0></a>
+<!--end of Top100 code--><br>
+                                                <!--begin of Top100 logo-->
+                                                <a href="http://top100.rambler.ru/top100/">
+                                                <img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+                                                <!--end of Top100 logo -->
+
+                                                <!--Rating@Mail.ru COUNTEr--><a target=_top
+                                                href="http://top.mail.ru/jump?from=1074291"><img
+                                                src="http://d4.c6.b0.a1.top.list.ru/counter?id=1074291;t=49"
+                                                border=0 height=31 width=88
+                                                alt="Рейтинг@Mail.ru"/></a><!--/COUNTER-->
+
+                                                <!--LiveInternet counter--><script type="text/javascript"><!--
+                                                document.write("<a href='http://www.liveinternet.ru/click' "+
+                                                "target=_blank><img src='//counter.yadro.ru/hit?t18.10;r"+
+                                                escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                                                ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                                                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                                                ";"+Math.random()+
+                                                "' alt='' title='LiveInternet: показано число просмотров за 24"+
+                                                " часа, посетителей за 24 часа и за сегодня' "+
+                                                "border='0' width='88' height='31'><\/a>")
+                                                //--></script><!--/LiveInternet-->
+
+                                                <!-- Yandex.Metrika informer -->
+                                                <a href="http://metrika.yandex.ru/stat/?id=7861186&amp;from=informer"
+                                                target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/7861186/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:7861186,type:0,lang:'ru'});return false}catch(e){}"/></a>
+                                                <!-- /Yandex.Metrika informer -->
+
+                                                <!-- Yandex.Metrika counter -->
+                                                <div style="display:none;">
+                                                    
+                                                <script type="text/javascript">
+                                                (function(w, c) {
+                                                    (w[c] = w[c] || []).push(function() {
+                                                        try {
+                                                            w.yaCounter7861186 = new Ya.Metrika({id:7861186, enableAll: true, webvisor:true});
+                                                        }
+                                                        catch(e) { }
+                                                    });
+                                                })(window, "yandex_metrika_callbacks");
+                                                </script>
+                                                </div>
+                                                <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+                                                <noscript><div><img src="//mc.yandex.ru/watch/7861186" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+                                                <!-- /Yandex.Metrika counter -->
+                               </div>	
+			</div>
+		</div>
+    </body>
+</html>

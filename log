@@ -1,9 +1,42 @@
 
 --------------------
-2014-01-23 08:02:24.436717
-gff200
---------------------
-2014-01-23 08:03:20.575320
+2014-01-23 12:23:23.771079
+
+[rdx]: 
+first start of project
+
+[gff]: 
+first start of project
+
+[ya]: 
+first start of project
+
 
 --------------------
-2014-01-23 08:05:51.772240
+2014-01-23 12:24:04.476407
+
+[rdx]: 
+site_status=200
+href_counting=OK
+hrefs_different=OK
+different_rows=notOK
+[[484], [515]]
+
+
+[gff]: 
+site_status=200
+href_counting=OK
+hrefs_different=OK
+different_rows=OK
+
+
+[ya]: 
+site_status=200
+href_counting=OK
+hrefs_different=OK
+different_rows=OK
+
+
+[yandex]: 
+first start of project
+

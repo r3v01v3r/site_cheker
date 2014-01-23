@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3.3
 # -*- coding: utf-8 -*-
 
+
 class Site:
 
     def get_all_project_names(self):
@@ -9,16 +10,11 @@ class Site:
         config.read('all_projects.cfg', encoding='utf-8')
         return config.sections()
 
-
     def get_bool_parametr_from_projects_cfg(self, project_name, parametr):
         import configparser
         config = configparser.ConfigParser()
         config.read('all_projects.cfg', encoding='utf-8')
         return bool(config[project_name][parametr])
-
-
-
-
 
     def get_site_link(self, project_name):
         import configparser
@@ -27,18 +23,15 @@ class Site:
         site_link = config[project_name]['url']
         return site_link
 
-
     def get_site_content(self, project_name):
         import requests
         site_link = self.get_site_link(project_name)
         site_content = requests.get(site_link).text.splitlines()
         return site_content
 
-
     def get_rows_count(self, content):
         rows_count = len(content)
         return rows_count
-
 
     def get_number_of_max_rows(self, project_name, site_content):
         cache = Cache()
@@ -50,7 +43,6 @@ class Site:
         else:
             number_of_max_row = len(site_content)
         return number_of_max_row
-
 
     def get_status_code_of_site(self, project_name):
         import requests
@@ -64,7 +56,6 @@ class Site:
             return site_status_code
         return site_status_code
 
-
     def does_site_have_cache(self, project_name):
         filename = '{0}.cache'.format(project_name)
         dir_name = 'cache'
@@ -76,13 +67,6 @@ class Site:
         except:
             return False
 
-
-
-
-
-
-
-
     def is_it_first_load_of_project(self, project_name):
         try:
             file = 'cache/{0}.cache'.format(project_name)
@@ -90,7 +74,6 @@ class Site:
             return False
         except:
             return True
-
 
     def how_much_hrefs_on_site(self, project_name):
         import re
@@ -113,7 +96,6 @@ class Site:
                 for href in hrefs_in_line:
                     list_of_hrefs_on_site.append(href)
         return list_of_hrefs_on_site
-
 
     def get_status_in_str_off_all_projects(self):
         site = Site()
@@ -146,13 +128,11 @@ class Cache:
         for line in site_content:
             count_href_in_cache += len(find_href.findall(line))
 
-
     def make_sites_caches(self):
         site = Site()
         for project_name in Site.get_all_project_names(self):
             site_content = site.get_site_content(project_name)
             self.make_site_cache(project_name, site_content)
-
 
     def get_site_cache(self, project_name):
         filename = '{0}.cache'.format(project_name)
@@ -166,14 +146,12 @@ class Cache:
         file.close
         return list(cache_text)
 
-
     def when_does_chache_maked(self, project_name):
         import re
         find_date = re.compile('\d\S*\d')
         cache_text = self.get_site_cache(project_name)
         when_does_chache_maked = find_date.findall(cache_text[0])
         return when_does_chache_maked[0]
-
 
     def how_much_hrefs_in_cache(self, project_name):
         import re
@@ -213,7 +191,7 @@ class Difference:
         max_rows = site.get_number_of_max_rows(project_name, site_content)
         for row in range(0, max_rows):
             if site_content[row] != site_cache[row]:
-                difference_row.append((row+1))
+                difference_row.append((row + 1))
                 difference_count = True
             elif site_content[row] == site_cache[row] and difference_count == True:
                 if len(difference_row) > 1:
@@ -235,11 +213,10 @@ class Difference:
 
         return difference_row_list
 
-
     def chek_for_href_count_change(self, project_name):
+
         site = Site()
         cache = Cache()
-
         all_hrefs_on_site = site.find_all_hrefs_on_site(project_name)
         all_hrefs_on_cache = cache.find_all_hrefs_in_cache(project_name)
         new_hrefs = []
@@ -267,7 +244,7 @@ class Difference:
             else:
                 new_hrefs.append(href)
 
-        return(new_hrefs)
+        return new_hrefs
 
 
 class Twitter:
@@ -277,7 +254,7 @@ class Twitter:
         from twython import Twython
         import random
 
-        random = random.randrange(1,999)
+        random = random.randrange(1, 999)
 
         twitter_ini = configparser.ConfigParser()
         twitter_ini.read('site_cheker.cfg')
@@ -290,7 +267,7 @@ class Twitter:
 
         twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
-        msg ='{0} {1} {2}'.format(random, acc_to_push, msg)
+        msg = '{0} {1} {2}'.format(random, acc_to_push, msg)
         twitter.update_status(status=msg)
 
 
@@ -304,8 +281,8 @@ class Config:
 
         return setting
 
+
 class SMS:
 
     def send_sms(self, msg):
         pass
-
