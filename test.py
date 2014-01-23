@@ -12,8 +12,6 @@ difference = Difference()
 sites_status_dict = collections.defaultdict(dict)
 report = 0
 
-l = site.find_all_hrefs_on_site('rdx')
-old = cache.find_all_hrefs_in_cache('rdx')
 
-diff = difference.find_new_hrefs_on_site('rdx')
-print(diff)
+file = open('logs/main_log.html', 'r', encoding='utf-8')
+print(file.read())
