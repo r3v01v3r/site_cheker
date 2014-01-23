@@ -19,8 +19,8 @@ print('console')
 # определяем первый это запуск скрипта или нет
 try:
     # не первый запуск
-    log = open('logs/main_log', 'r', encoding='utf-8')
-    log = open('logs/main_log', 'a', encoding='utf-8')
+    log = open('logs/main_log.html', 'r', encoding='utf-8')
+    log = open('logs/main_log.html', 'a', encoding='utf-8')
     log_date = '{0}\n\n'.format(datetime.datetime.now())
     log.write('\n')
     log.write('-' * 20)
@@ -29,7 +29,7 @@ try:
 except:
     # первый запуск
     os.mkdir('logs', 0o777)
-    log = open('logs/main_log', 'w', encoding='utf-8')
+    log = open('logs/main_log.html', 'w', encoding='utf-8')
     log.write('\n')
     log.write('-' * 20)
     log.write('\n')
