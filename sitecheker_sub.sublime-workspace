@@ -1,0 +1,304 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Загрузки/baton.py",
+			"settings":
+			{
+				"buffer_size": 516,
+				"line_ending": "Windows",
+				"name": "print"
+			}
+		},
+		{
+			"file": "/C/Загрузки/yandex_54880e6c9295d4a7.html",
+			"settings":
+			{
+				"buffer_size": 161,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 132.0,
+		"history":
+		[
+			"dir(help)",
+			"dir)help)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Red11/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Red11/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/YandexDisk/Работа/workstaff.ru/workstaff_backup_18.03/workstaff_backup_18.03/send.php",
+		"/C/YandexDisk/Работа/workstaff.ru/workstaff_backup_18.03/workstaff_backup_18.03/calc2.php",
+		"/C/YandexDisk/Работа/workstaff.ru/workstaff_backup_18.03/workstaff_backup_18.03/calc3.php",
+		"/C/YandexDisk/Работа/workstaff.ru/workstaff_backup_18.03/workstaff_backup_18.03/calc1.php",
+		"/C/YandexDisk/Работа/workstaff.ru/workstaff_backup_18.03/workstaff_backup_18.03/send1.php",
+		"/C/Загрузки/re/new/calc.htm",
+		"/C/Users/Red11/Desktop/hosts",
+		"/C/Загрузки/calc.htm",
+		"/C/Загрузки/price.htm",
+		"/C/Загрузки/footer.tpl",
+		"/C/Загрузки/wp-config.php",
+		"/C/Загрузки/backups/scan-nn.ru/wp-config.php",
+		"/C/Загрузки/backups/scaninrussia.com/wp-config.php",
+		"/C/Загрузки/backups/e-arch.ru/wp-config.php",
+		"/C/Загрузки/wp/wp/wp-config.php",
+		"/C/Загрузки/lesson5/lesson5/execrises/flat.py",
+		"/C/YandexDisk/Работа/redocs.ru/htdocs/templates/blocks/header.html",
+		"/C/YandexDisk/Работа/redocs.ru/htdocs/templates/page_main.tpl",
+		"/C/YandexDisk/Работа/redocs.ru/htdocs/templates/page.tpl",
+		"/C/YandexDisk/Работа/proactivweb.ru/backup/proactivweb.vsekotletki.ru/wp-config.php",
+		"/C/Загрузки/page_main.tpl",
+		"/C/YandexDisk/Работа/proactivweb.ru/backup/wp-config.php",
+		"/C/YandexDisk/Работа/proactivweb.ru/backup/proactivweb.vsekotletki.ru/wp-content/themes/proactiv/comments.php",
+		"/C/YandexDisk/Работа/proactivweb.ru/backup/proactivweb.vsekotletki.ru/wp-content/themes/proactiv/single.php",
+		"/C/YandexDisk/Работа/proactivweb.ru/backup/proactivweb.vsekotletki.ru/wp-content/plugins/oa-social-login/includes/widget.php",
+		"/C/YandexDisk/Работа/redocs.ru/htdocs/adc/config.php",
+		"/C/Загрузки/header.html",
+		"/C/Загрузки/page_main.html",
+		"/C/YandexDisk/Работа/proactivweb.ru/backup/proactivweb (4).sql",
+		"/C/Загрузки/price.html",
+		"/C/Загрузки/clc.js",
+		"/C/Users/Red11/Envs/site_cheker/sitecheker/sitecheker.py",
+		"//ALEX/ren/show_main_page.php",
+		"/C/Загрузки/wp-login.php",
+		"/C/Загрузки/readme.txt",
+		"/C/Загрузки/options.php",
+		"/C/Загрузки/functions.php",
+		"/C/Загрузки/database-backup-1391185742/database-backup-1391185742.sql",
+		"/C/Users/Red11/Envs/site_cheker/sitecheker/sitecheker_sub.sublime-project",
+		"/C/Users/Red11/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<h4>",
+			"</h4>",
+			"</h5>",
+			"<h5>",
+			"изображение",
+			"Набор текста (простой текст на русском языке)   ",
+			"must-log-in",
+			"комплекс",
+			"отдельности",
+			"16 000",
+			"<b>Цена:</b><span class=\"pric\">",
+			"cache",
+			"title",
+			"href=\"http://ru.wordpress.org/\"",
+			"<a href=\"http://ru.wordpress.org/\"",
+			"<a href=\"http://ru.wordpress.org/\" title=\"Сайт работает на WordPress\">ProActivWeb</a>",
+			"auto",
+			"spac",
+			"show"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<h2>",
+			"</h2>",
+			"</h4>",
+			"<h4>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Загрузки/baton.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"auto_name": "print",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Загрузки/yandex_54880e6c9295d4a7.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								161,
+								161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 349.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "sitecheker_sub.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Red11\\Envs\\site_cheker\\sitecheker\\sitecheker_sub.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
